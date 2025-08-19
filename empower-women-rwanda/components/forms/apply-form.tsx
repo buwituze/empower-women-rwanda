@@ -35,7 +35,7 @@ export function ApplyForm() {
           }
         });
       }}
-      className="rounded-xl border p-4"
+      className="rounded-xl border-2 border-gray-100 p-10"
     >
       <h3 className="mb-3 text-lg font-semibold text-[#20603e]">
         Application Form

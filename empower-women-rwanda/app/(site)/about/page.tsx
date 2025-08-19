@@ -1,4 +1,6 @@
 import Image from "next/image";
+import Link from "next/link";
+import { Button } from "@/components/ui/button";
 
 export const metadata = {
   title: "About Us",
@@ -39,15 +41,64 @@ const team: Member[] = [
 
 export default function AboutPage() {
   return (
-    <div className="py-12 md:py-16">
+    <div className="min-h-screen bg-white text-slate-900">
       {/* Hero Section */}
-      <section className="container mx-auto px-4 mb-16">
+      <section className=" bg-slate-900/90 py-10 mb-16">
+        <header className="container mx-auto px-6">
+          <div className="grid gap-10 md:grid-cols-2 md:items-center">
+            <div className="pl-8">
+              <h1 className="text-4xl font-bold text-white mb-6">About Us</h1>
+              <p className=" text-gray-300 mb-6">
+                Empower Women Rwanda is a non-profit organization founded by
+                Emmanuel Rwagasore that focuses on transforming the lives of
+                Rwandan women by breaking barriers that prevent them from
+                participating fully in the country's economic development.
+              </p>
+              <div className="mt-6 flex flex-wrap gap-3">
+                <Button
+                  asChild
+                  className="bg-[#f7ce04] text-black hover:bg-[#e0bc05]"
+                >
+                  <Link href="/get-involved#apply">Apply for Programs</Link>
+                </Button>
+                <Button
+                  asChild
+                  variant="outline"
+                  className="border-white bg-white/10 text-white hover:bg-white/20"
+                >
+                  <Link href="/get-involved#donate">Support Our Mission</Link>
+                </Button>
+              </div>
+            </div>
+            <div className="pl-20">
+              <Image
+                src="/placeholder-5j713.png"
+                width={100}
+                height={60}
+                alt="Community training with Rwandan women"
+                className="w-full rounded-xl border-none object-cover shadow-lg"
+              />
+            </div>
+          </div>
+        </header>
+      </section>
+      <section className="container mx-auto px-14 mb-16">
         <div className="grid gap-10 md:grid-cols-2 md:items-center">
+          <div>
+            <Image
+              src="/placeholder-5j713.png"
+              width={640}
+              height={440}
+              alt="Community training with Rwandan women"
+              className="w-full rounded-xl border-none object-cover shadow-lg"
+            />
+          </div>
+
           <div>
             <h1 className="text-4xl font-bold text-[#20603e] mb-6">
               About Empower Women Rwanda
             </h1>
-            <p className="text-lg text-gray-600 mb-6">
+            <p className=" text-gray-600 mb-6">
               Empower Women Rwanda is a non-profit organization founded by
               Emmanuel Rwagasore that focuses on transforming the lives of
               Rwandan women by breaking barriers that prevent them from
@@ -60,23 +111,13 @@ export default function AboutPage() {
               sectors.
             </p>
           </div>
-          <div>
-            <Image
-              src="/placeholder-5j713.png"
-              width={640}
-              height={440}
-              alt="Community training with Rwandan women"
-              className="w-full rounded-xl border object-cover shadow-lg"
-            />
-          </div>
         </div>
       </section>
-
       {/* Mission & Vision */}
       <section className="bg-gradient-to-br from-[#20603e]/5 to-[#0b97d5]/5 py-16">
-        <div className="container mx-auto px-4">
+        <div className="container mx-auto px-6">
           <div className="grid gap-8 md:grid-cols-2">
-            <div className="bg-white rounded-xl p-8 shadow-sm">
+            <div className="bg-white ml-7 rounded-xl p-8 shadow-sm">
               <h2 className="text-2xl font-bold text-[#20603e] mb-4">
                 Our Mission
               </h2>
@@ -100,7 +141,6 @@ export default function AboutPage() {
           </div>
         </div>
       </section>
-
       {/* Our Approach */}
       <section className="container mx-auto px-4 py-16">
         <h2 className="text-3xl font-bold text-[#20603e] mb-8 text-center">
@@ -143,14 +183,13 @@ export default function AboutPage() {
           </div>
         </div>
       </section>
-
       {/* Impact Goal */}
-      <section className="bg-gray-50 py-16">
+      <section className="bg-slate-900 py-16">
         <div className="container mx-auto px-4 text-center">
-          <h2 className="text-3xl font-bold text-[#20603e] mb-6">
+          <h2 className="text-3xl font-bold text-white mb-6">
             Our Impact Goal
           </h2>
-          <p className="text-lg text-gray-600 max-w-3xl mx-auto mb-8">
+          <p className="text-lg text-gray-300 max-w-3xl mx-auto mb-8">
             We aim to reach 1 million women across Rwanda over three years,
             providing them with the tools, skills, and knowledge needed to
             contribute meaningfully to Rwanda's growing economy.
@@ -158,20 +197,19 @@ export default function AboutPage() {
           <div className="grid gap-6 sm:grid-cols-3 max-w-2xl mx-auto">
             <div className="text-center">
               <div className="text-3xl font-bold text-[#0b97d5] mb-2">1M+</div>
-              <div className="text-gray-600">Women to Empower</div>
+              <div className="text-gray-300">Women to Empower</div>
             </div>
             <div className="text-center">
               <div className="text-3xl font-bold text-[#f7ce04] mb-2">3</div>
-              <div className="text-gray-600">Years Timeline</div>
+              <div className="text-gray-300">Years Timeline</div>
             </div>
             <div className="text-center">
               <div className="text-3xl font-bold text-[#20603e] mb-2">30</div>
-              <div className="text-gray-600">Districts Coverage</div>
+              <div className="text-gray-300">Districts Coverage</div>
             </div>
           </div>
         </div>
       </section>
-
       {/* Leadership Team */}
       <section className="container mx-auto px-4 py-16">
         <h2 className="text-3xl font-bold text-[#20603e] mb-8 text-center">
@@ -181,7 +219,7 @@ export default function AboutPage() {
           {team.map((member) => (
             <div
               key={member.name}
-              className="bg-white rounded-xl border p-6 text-center hover:shadow-lg transition-shadow"
+              className="bg-white rounded-xl border-2 border-emerald-50 shadow-emerald-50 p-6 text-center hover:shadow-lg "
             >
               <Image
                 src={`/abstract-geometric-shapes.png?height=200&width=200&query=${member.imgQuery}`}
