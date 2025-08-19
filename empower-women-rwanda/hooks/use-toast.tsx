@@ -2,10 +2,41 @@
 
 import * as React from "react";
 
-import type { ToastActionElement, ToastProps } from "@/components/ui/sonner";
-
 const TOAST_LIMIT = 1;
 const TOAST_REMOVE_DELAY = 1000000;
+
+// Define the types locally instead of importing from sonner
+export interface ToastProps {
+  id?: string;
+  title?: React.ReactNode;
+  description?: React.ReactNode;
+  action?: ToastActionElement;
+  duration?: number;
+  dismissible?: boolean;
+  onDismiss?: () => void;
+  onAutoClose?: () => void;
+  invert?: boolean;
+  important?: boolean;
+  position?:
+    | "top-left"
+    | "top-right"
+    | "bottom-left"
+    | "bottom-right"
+    | "top-center"
+    | "bottom-center";
+  className?: string;
+  style?: React.CSSProperties;
+  cancelButtonStyle?: React.CSSProperties;
+  actionButtonStyle?: React.CSSProperties;
+  open?: boolean;
+  onOpenChange?: (open: boolean) => void;
+}
+
+export interface ToastActionElement {
+  label: React.ReactNode;
+  onClick: (event: React.MouseEvent<HTMLButtonElement>) => void;
+  altText?: string;
+}
 
 type ToasterToast = ToastProps & {
   id: string;

@@ -36,7 +36,6 @@ export function ContactForm() {
             toast({
               title: "Submission failed",
               description: res.error ?? "Please try again.",
-              variant: "destructive",
             });
           }
         });
