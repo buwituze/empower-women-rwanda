@@ -31,7 +31,7 @@ const testimonials = [
 
 export function TestimonialSection() {
   return (
-    <section className="py-16 bg-gradient-to-br from-[#20603e]/5 to-[#0b97d5]/5">
+    <section className="py-16 ">
       <div className="container mx-auto px-4">
         <div className="text-center mb-12">
           <h2 className="text-3xl font-bold text-[#20603e] mb-4">
@@ -43,7 +43,7 @@ export function TestimonialSection() {
           </p>
         </div>
 
-        <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
+        <div className="grid  gap-8 md:grid-cols-2 lg:grid-cols-3">
           {testimonials.map((testimonial, index) => (
             <TestimonialCard key={index} {...testimonial} />
           ))}
@@ -79,7 +79,7 @@ function TestimonialCard({
   rating: number;
 }) {
   return (
-    <Card className="h-full border-[#20603e]/10 hover:shadow-lg transition-shadow">
+    <Card className="h-full bg-gradient-to-br from-[#20603e]/5 to-[#0b97d5]/5 border-none shadow-none hover:shadow-lg transition-shadow">
       <CardContent className="p-6">
         <div className="flex items-center gap-4 mb-4">
           <Image

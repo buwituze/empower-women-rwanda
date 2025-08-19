@@ -45,7 +45,7 @@ const navigationConfig = {
     },
     { href: "/get-involved", label: "Get Involved" },
     { href: "/news", label: "Blog" },
-    { href: "/contact", label: "Contact" },
+    { href: "/#contact", label: "Contact" },
   ],
   actionButtons: [
     {
@@ -255,9 +255,6 @@ export default function NavBar() {
           </div>
         )}
       </header>
-
-      {/* Spacer to prevent content from hiding behind fixed navbar */}
-      <div className="h-14" />
     </>
   );
 }

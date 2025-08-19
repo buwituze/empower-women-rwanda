@@ -12,7 +12,10 @@ export default function HeroV2({
   subheadline = "Transforming the lives of Rwandan women through education, entrepreneurship, and leadership development",
 }: Props) {
   return (
-    <section aria-label="Hero" className="relative overflow-hidden">
+    <section
+      aria-label="Hero"
+      className="relative overflow-hidden min-h-screen flex items-center"
+    >
       {/* Background: layered gradients with subtle grid and curve */}
       <div className="absolute inset-0">
         <div className="absolute inset-0 bg-slate-900" />
@@ -27,7 +30,7 @@ export default function HeroV2({
         />
       </div>
 
-      <div className="relative container mx-auto px-4 py-16 sm:py-20 lg:py-24">
+      <div className="relative container mx-auto px-4 py-16 sm:py-20 lg:py-24 w-full">
         <div className="grid items-center gap-10 lg:grid-cols-12">
           <div className="lg:col-span-7 text-white">
             <h1 className="text-balance text-4xl font-extrabold tracking-tight sm:text-5xl lg:text-6xl">

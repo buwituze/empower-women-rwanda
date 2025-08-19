@@ -3,7 +3,7 @@ import HeroV2 from "@/components/HeroSection";
 import { ProgramCard } from "@/components/proogram-card";
 import { TestimonialSection } from "@/components/testimonial-section";
 import { FAQSection } from "@/components/faq-section";
-import { ContactSection } from "@/components/contact-section";
+import Contact from "@/components/contact-section";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
@@ -35,7 +35,7 @@ export default function HomePage() {
             </p>
           </div>
 
-          <div className="grid lg:grid-cols-2 gap-12 items-center mb-16">
+          <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div className="space-y-6">
               <div className="space-y-4">
                 <h3 className="text-2xl font-bold text-slate-900">
@@ -84,21 +84,21 @@ export default function HomePage() {
       </section>
 
       {/* Programs Section */}
-      <section className="py-16">
+      <section className="bg-slate-900 py-16">
         <div className="container mx-auto px-4">
-          <div className="flex items-end justify-between gap-4 mb-8">
-            <div>
-              <h2 className="text-3xl font-bold text-[#20603e] mb-2">
+          <div className="flex flex-col items-center justify-center gap-4 mb-12">
+            <div className="text-center">
+              <h2 className="text-3xl text-center font-bold text-[#0b97d5] mb-2">
                 Our Programs
               </h2>
-              <p className="text-gray-600">
+              <p className="text-gray-300">
                 Comprehensive training across four key sectors
               </p>
             </div>
             <Button
               asChild
               variant="outline"
-              className="border-[#0b97d5] text-[#0b97d5] hover:bg-[#0b97d5]/10 bg-transparent"
+              className="bg-gradient-to-r from-[#f7ce04] to-[#0b97d5] border-none hover:border-[#0b97d5] items-center text-black hover:bg-[#0b97d5]/10"
             >
               <Link href="/programs">View All Programs</Link>
             </Button>
@@ -109,28 +109,24 @@ export default function HomePage() {
               description="Modern, sustainable techniques to increase productivity and access digital markets."
               href="/programs#agriculture"
               imageQuery="Rwanda%20modern%20farming%20women"
-              tag="Sustainable"
             />
             <ProgramCard
               title="Farming & Livestock"
               description="Poultry & small livestock management plus value‑added agri‑business skills."
               href="/programs#livestock"
               imageQuery="Rwanda%20women%20livestock%20poultry"
-              tag="Agri‑business"
             />
             <ProgramCard
               title="Business & Entrepreneurship"
               description="Business fundamentals, finance, marketing, mentorship, and incubation."
               href="/programs#business"
               imageQuery="Rwanda%20women%20entrepreneurship%20training"
-              tag="Incubation"
             />
             <ProgramCard
               title="Digital Business & E‑commerce"
               description="E‑commerce, digital marketing, and fintech to master the digital economy."
               href="/programs#digital"
               imageQuery="Rwanda%20women%20digital%20business"
-              tag="Digital"
             />
           </div>
         </div>
@@ -143,7 +139,7 @@ export default function HomePage() {
       <FAQSection />
 
       {/* Contact Section */}
-      <ContactSection />
+      <Contact />
     </>
   );
 }

@@ -8,7 +8,6 @@ type Props = {
   description?: string;
   href?: string;
   imageQuery?: string;
-  tag?: string;
 };
 
 export function ProgramCard({
@@ -16,11 +15,10 @@ export function ProgramCard({
   description = "Short description of the program.",
   href = "/programs",
   imageQuery = "Rwanda%20women%20training%20program",
-  tag = "8-month",
 }: Props) {
   return (
     <Link href={href} className="group">
-      <Card className="h-full overflow-hidden border-[#20603e]/15 transition-shadow group-hover:shadow-md">
+      <Card className="h-full overflow-hidden bg-white border-[#20603e]/15  transition-shadow group-hover:shadow-md">
         <div className="relative">
           <Image
             src={`/placeholder.svg?height=180&width=520&query=${imageQuery}`}
@@ -29,10 +27,6 @@ export function ProgramCard({
             alt={title}
             className="h-44 w-full object-cover"
           />
-          <Badge className="absolute left-3 top-3 bg-[#0b97d5] hover:bg-[#0b97d5]">
-            {" "}
-            {tag}{" "}
-          </Badge>
         </div>
         <CardHeader className="pb-2">
           <CardTitle className="text-base">{title}</CardTitle>
