@@ -63,7 +63,7 @@ export default function AgricultureProgramPage() {
       </section>
 
       {/* Program Overview */}
-      <section id="learn-more" className="py-16">
+      <section id="learn-more" className="py-0">
         <div className="container mx-auto px-6">
           <div className="max-w-4xl mx-auto">
             <div className="text-center mb-16">
