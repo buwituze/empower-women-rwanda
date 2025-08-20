@@ -7,18 +7,11 @@ import { usePathname } from "next/navigation";
 import { useState } from "react";
 import { Menu, ChevronDown, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import {
-  DropdownMenu,
-  DropdownMenuContent,
-  DropdownMenuItem,
-  DropdownMenuTrigger,
-} from "@/components/ui/dropdown-menu";
 import { cn } from "@/lib/utils";
 
-// Dynamic navigation configuration
 const navigationConfig = {
   logo: {
-    src: "/EMPOWER.png", // Replace with your actual logo path
+    src: "/EMPOWER.png",
     alt: "Empower Women Rwanda",
     width: 120,
     height: 32,
@@ -44,7 +37,7 @@ const navigationConfig = {
       ],
     },
     { href: "/get-involved", label: "Get Involved" },
-    { href: "/news", label: "Blog" },
+    // { href: "/news", label: "Blog" },
     { href: "/#contact", label: "Contact" },
   ],
   actionButtons: [
@@ -73,20 +66,27 @@ const brandColors = {
 export default function NavBar() {
   const pathname = usePathname();
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [desktopDropdownOpen, setDesktopDropdownOpen] = useState(false);
+  const [mobileProgramsOpen, setMobileProgramsOpen] = useState(false);
 
   const isActiveLink = (href: string) => {
     if (href === "/") return pathname === "/";
     return pathname?.startsWith(href);
   };
 
-  const closeMobileMenu = () => setMobileMenuOpen(false);
+  const closeMobileMenu = () => {
+    setMobileMenuOpen(false);
+    setMobileProgramsOpen(false);
+  };
+
+  const toggleMobilePrograms = () => {
+    setMobileProgramsOpen(!mobileProgramsOpen);
+  };
 
   return (
     <>
-      {/* Fixed navbar with proper z-index */}
       <header className="fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-md supports-[backdrop-filter]:bg-white/60 shadow-sm">
         <div className="container mx-auto flex h-20 items-center justify-between px-4 lg:px-6">
-          {/* Logo Section */}
           <Link href="/" className="flex items-center gap-2 font-semibold">
             <div className="relative flex items-center">
               <Image
@@ -96,7 +96,6 @@ export default function NavBar() {
                 height={navigationConfig.logo.height}
                 className="h-40 w-30 object-contain"
                 onError={(e) => {
-                  // Fallback to text logo if image fails to load
                   const target = e.target as HTMLImageElement;
                   target.style.display = "none";
                   const parent = target.parentElement;
@@ -109,43 +108,57 @@ export default function NavBar() {
             </div>
           </Link>
 
-          {/* Desktop Navigation */}
           <nav className="hidden items-center gap-1 lg:flex">
             {navigationConfig.mainNav.map((item) => {
               if (item.dropdown) {
                 return (
-                  <DropdownMenu key={item.href}>
-                    <DropdownMenuTrigger asChild>
-                      <button
-                        className={cn(
-                          "inline-flex items-center gap-1 px-3 py-2 text-sm font-medium transition-all duration-200 hover:text-[#0b97d5] rounded-md hover:bg-gray-50",
-                          isActiveLink(item.href)
-                            ? "text-[#0b97d5] bg-[#0b97d5]/5"
-                            : "text-gray-700"
-                        )}
-                        aria-label={item.label}
-                      >
-                        {item.label}
-                        <ChevronDown className="h-4 w-4 transition-transform duration-200 group-data-[state=open]:rotate-180" />
-                      </button>
-                    </DropdownMenuTrigger>
-                    <DropdownMenuContent
-                      align="start"
-                      className="min-w-64 mt-1 border shadow-lg bg-white/95 backdrop-blur-md"
-                      sideOffset={4}
+                  <div key={item.href} className="relative">
+                    <button
+                      className={cn(
+                        "inline-flex items-center gap-1 px-3 py-2 text-sm font-medium transition-all duration-200 hover:text-[#0b97d5] rounded-md hover:bg-gray-50",
+                        isActiveLink(item.href)
+                          ? "text-[#0b97d5] bg-[#0b97d5]/5"
+                          : "text-gray-700",
+                        desktopDropdownOpen && "text-[#0b97d5] bg-[#0b97d5]/5"
+                      )}
+                      aria-label={item.label}
+                      onMouseEnter={() => setDesktopDropdownOpen(true)}
+                      onMouseLeave={() => setDesktopDropdownOpen(false)}
+                      onClick={() =>
+                        setDesktopDropdownOpen(!desktopDropdownOpen)
+                      }
                     >
-                      {item.dropdown.map((subItem) => (
-                        <DropdownMenuItem key={subItem.href} asChild>
-                          <Link
-                            href={subItem.href}
-                            className="block px-4 py-2.5 text-sm text-gray-700 hover:text-[#0b97d5] hover:bg-[#0b97d5]/5 transition-colors duration-200"
-                          >
-                            {subItem.label}
-                          </Link>
-                        </DropdownMenuItem>
-                      ))}
-                    </DropdownMenuContent>
-                  </DropdownMenu>
+                      {item.label}
+                      <ChevronDown
+                        className={cn(
+                          "h-4 w-4 transition-transform duration-200",
+                          desktopDropdownOpen && "rotate-180"
+                        )}
+                      />
+                    </button>
+
+                    {/* Desktop Dropdown - Positioned absolutely to avoid layout shifts */}
+                    {desktopDropdownOpen && (
+                      <div
+                        className="absolute top-full left-0 mt-2 min-w-64 bg-white/95 backdrop-blur-md border shadow-lg rounded-md z-50"
+                        onMouseEnter={() => setDesktopDropdownOpen(true)}
+                        onMouseLeave={() => setDesktopDropdownOpen(false)}
+                      >
+                        <div className="py-2">
+                          {item.dropdown.map((subItem) => (
+                            <Link
+                              key={subItem.href}
+                              href={subItem.href}
+                              className="block px-4 py-2.5 text-sm text-gray-700 hover:text-[#0b97d5] hover:bg-[#0b97d5]/5 transition-colors duration-200"
+                              onClick={() => setDesktopDropdownOpen(false)}
+                            >
+                              {subItem.label}
+                            </Link>
+                          ))}
+                        </div>
+                      </div>
+                    )}
+                  </div>
                 );
               }
 
@@ -166,7 +179,6 @@ export default function NavBar() {
             })}
           </nav>
 
-          {/* Desktop Action Buttons */}
           <div className="hidden gap-3 lg:flex">
             {navigationConfig.actionButtons.map((button) => (
               <Button
@@ -181,7 +193,6 @@ export default function NavBar() {
             ))}
           </div>
 
-          {/* Mobile Menu Toggle */}
           <Button
             size="sm"
             variant="ghost"
@@ -197,7 +208,7 @@ export default function NavBar() {
           </Button>
         </div>
 
-        {/* Mobile Navigation Menu */}
+        {/* Mobile Menu */}
         {mobileMenuOpen && (
           <div className="border-t bg-white/95 backdrop-blur-md lg:hidden animate-in slide-in-from-top-2 duration-200">
             <div className="container mx-auto px-4 py-4 space-y-2">
@@ -205,18 +216,39 @@ export default function NavBar() {
                 if (item.dropdown) {
                   return (
                     <div key={item.href} className="space-y-1">
-                      <div className="text-xs font-semibold uppercase text-gray-500 px-3 py-2">
+                      <button
+                        onClick={toggleMobilePrograms}
+                        className={cn(
+                          "flex items-center justify-between w-full text-left rounded-md px-3 py-2.5 text-sm font-medium transition-all duration-200",
+                          isActiveLink(item.href)
+                            ? "text-[#0b97d5] bg-[#0b97d5]/5 border-l-2 border-[#0b97d5]"
+                            : "text-gray-700 hover:text-[#0b97d5] hover:bg-gray-50"
+                        )}
+                      >
                         {item.label}
-                      </div>
-                      {item.dropdown.map((subItem) => (
-                        <MobileLink
-                          key={subItem.href}
-                          href={subItem.href}
-                          onClick={closeMobileMenu}
-                          label={subItem.label}
-                          isActive={isActiveLink(subItem.href)}
+                        <ChevronDown
+                          className={cn(
+                            "h-4 w-4 transition-transform duration-200",
+                            mobileProgramsOpen && "rotate-180"
+                          )}
                         />
-                      ))}
+                      </button>
+
+                      {/* Mobile Programs Dropdown */}
+                      {mobileProgramsOpen && (
+                        <div className="ml-4 space-y-1 animate-in slide-in-from-top-2 duration-200">
+                          {item.dropdown.map((subItem) => (
+                            <MobileLink
+                              key={subItem.href}
+                              href={subItem.href}
+                              onClick={closeMobileMenu}
+                              label={subItem.label}
+                              isActive={isActiveLink(subItem.href)}
+                              isSubItem={true}
+                            />
+                          ))}
+                        </div>
+                      )}
                     </div>
                   );
                 }
@@ -232,7 +264,6 @@ export default function NavBar() {
                 );
               })}
 
-              {/* Mobile Action Buttons */}
               <div className="pt-4 space-y-2">
                 {navigationConfig.actionButtons.map((button) => (
                   <Button
@@ -259,21 +290,28 @@ export default function NavBar() {
   );
 }
 
-// Mobile Link Component
 interface MobileLinkProps {
   href: string;
   label: string;
   onClick?: () => void;
   isActive?: boolean;
+  isSubItem?: boolean;
 }
 
-function MobileLink({ href, label, onClick, isActive }: MobileLinkProps) {
+function MobileLink({
+  href,
+  label,
+  onClick,
+  isActive,
+  isSubItem = false,
+}: MobileLinkProps) {
   return (
     <Link
       href={href}
       onClick={onClick}
       className={cn(
         "block rounded-md px-3 py-2.5 text-sm font-medium transition-all duration-200",
+        isSubItem && "text-xs pl-4",
         isActive
           ? "text-[#0b97d5] bg-[#0b97d5]/5 border-l-2 border-[#0b97d5]"
           : "text-gray-700 hover:text-[#0b97d5] hover:bg-gray-50"
