@@ -23,7 +23,7 @@ export default function HomePage() {
 
       {/* Who We Are Section */}
       <section id="about" className="py-20 bg-white">
-        <div className="container mx-auto px-4">
+        <div className="container mx-auto px-7.5">
           <div className="text-center mb-16">
             <h2 className="text-3xl lg:text-4xl font-bold text-slate-900 mb-4">
               Our Mission & Vision
@@ -70,7 +70,7 @@ export default function HomePage() {
                 </div>
               </div>
             </div>
-            <div className="relative">
+            <div className="relative flex items-end justify-end">
               <Image
                 src="/placeholder.svg?height=400&width=500"
                 alt="Women learning technology skills"
@@ -85,7 +85,7 @@ export default function HomePage() {
 
       {/* Programs Section */}
       <section className="bg-slate-900 py-16">
-        <div className="container mx-auto px-4">
+        <div className="container mx-auto px-7">
           <div className="flex flex-col items-center justify-center gap-4 mb-12">
             <div className="text-center">
               <h2 className="text-3xl text-center font-bold text-[#0b97d5] mb-2">

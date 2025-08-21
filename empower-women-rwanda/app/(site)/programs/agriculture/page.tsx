@@ -19,7 +19,7 @@ export default function AgricultureProgramPage() {
     <div className="min-h-screen bg-white">
       {/* Hero Section */}
       <section className="bg-slate-900/90 py-10 mb-16">
-        <header className="container mx-auto px-6">
+        <header className="container mx-auto pr-6">
           <div className="grid gap-10 md:grid-cols-2 md:items-center">
             <div className="pl-8">
               <h1 className="text-4xl font-bold text-white mb-6">

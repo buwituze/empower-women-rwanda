@@ -44,7 +44,7 @@ export default function AboutPage() {
     <div className="min-h-screen bg-white text-slate-900">
       {/* Hero Section */}
       <section className=" bg-slate-900/90 py-10 mb-16">
-        <header className="container mx-auto px-6">
+        <header className="container mx-auto pr-6">
           <div className="grid gap-10 md:grid-cols-2 md:items-center">
             <div className="pl-8">
               <h1 className="text-4xl font-bold text-white mb-6">About Us</h1>
@@ -82,7 +82,7 @@ export default function AboutPage() {
           </div>
         </header>
       </section>
-      <section className="container mx-auto px-14 mb-16">
+      <section className="container mx-auto px-6.5 mb-16">
         <div className="grid gap-10 md:grid-cols-2 md:items-center">
           <div>
             <Image
@@ -115,7 +115,7 @@ export default function AboutPage() {
       </section>
       {/* Mission & Vision */}
       <section className="bg-gradient-to-br from-[#20603e]/5 to-[#0b97d5]/5 py-16">
-        <div className="container mx-auto px-6">
+        <div className="container mx-auto px-0 pr-6">
           <div className="grid gap-8 md:grid-cols-2">
             <div className="bg-white ml-7 rounded-xl p-8 shadow-sm">
               <h2 className="text-2xl font-bold text-[#20603e] mb-4">
@@ -210,8 +210,9 @@ export default function AboutPage() {
           </div>
         </div>
       </section>
+
       {/* Leadership Team */}
-      <section className="container mx-auto px-4 py-16">
+      <section className="container mx-auto px-6 py-16">
         <h2 className="text-3xl font-bold text-[#20603e] mb-8 text-center">
           Leadership Team
         </h2>
