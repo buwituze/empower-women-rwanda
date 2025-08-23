@@ -2,6 +2,19 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { ApplyForm } from "@/components/forms/apply-form";
 import { PartnerForm } from "@/components/forms/partner-form";
 import { VolunteerForm } from "@/components/forms/volunteer-form";
+import { Button } from "@/components/ui/button";
+import Image from "next/image";
+import Link from "next/link";
+import {
+  GraduationCap,
+  Handshake,
+  Users,
+  Heart,
+  Target,
+  Calendar,
+  Mail,
+  Phone,
+} from "lucide-react";
 
 export const metadata = {
   title: "Get Involved",
@@ -11,104 +24,1115 @@ export const metadata = {
 
 export default function GetInvolvedPage() {
   return (
-    <section className="container mx-auto px-4 py-12 md:py-16">
-      <h1 className="text-3xl font-bold text-[#20603e]">Get Involved</h1>
-      <p className="mt-2 max-w-prose text-muted-foreground">
-        Join our mission to empower 1 million women in Rwanda through education,
-        leadership and entrepreneurship.
-      </p>
-
-      <Tabs defaultValue="apply" className="mt-6">
-        <TabsList className="grid w-full grid-cols-4">
-          <TabsTrigger value="apply" id="apply">
-            Apply
-          </TabsTrigger>
-          <TabsTrigger value="partner">Partner</TabsTrigger>
-          <TabsTrigger value="volunteer">Volunteer</TabsTrigger>
-          <TabsTrigger value="donate" id="donate">
-            Donate
-          </TabsTrigger>
-        </TabsList>
-
-        <TabsContent value="apply" className="mt-6">
-          <div className="grid gap-8 lg:grid-cols-2">
-            <div>
-              <h2 className="text-xl font-semibold text-[#20603e]">
-                Eligibility
-              </h2>
-              <ul className="mt-2 list-disc space-y-2 pl-5 text-muted-foreground">
-                <li>Age 18–45, resident of Rwanda</li>
-                <li>Motivated to start or grow a business</li>
-                <li>Committed to the 8-month program</li>
-                <li>Ready to empower other women</li>
-              </ul>
-              <h2 className="mt-6 text-xl font-semibold text-[#20603e]">
-                Application Process
-              </h2>
-              <ol className="mt-2 list-decimal space-y-2 pl-5 text-muted-foreground">
-                <li>Complete the online application form</li>
-                <li>Community recommendation</li>
-                <li>Interview</li>
-                <li>Program placement</li>
-              </ol>
+    <div className="min-h-screen bg-white text-slate-900">
+      {/* Hero Section - Same design as About page */}
+      <section className="bg-slate-900/90 py-10 mb-16">
+        <header className="container mx-auto pr-6">
+          <div className="grid gap-10 md:grid-cols-2 md:items-center">
+            <div className="pl-8">
+              <h1 className="text-4xl font-bold text-white mb-6">
+                Get Involved
+              </h1>
+              <p className="text-gray-300 mb-6">
+                Join our mission to empower 1 million women in Rwanda through
+                education, leadership and entrepreneurship. Together, we can
+                break barriers and create lasting change in communities across
+                Rwanda.
+              </p>
+              <div className="mt-6 flex flex-wrap gap-3">
+                <Button
+                  asChild
+                  className="bg-[#f7ce04] text-black hover:bg-[#e0bc05]"
+                >
+                  <Link href="#apply">Apply to Programs</Link>
+                </Button>
+                <Button
+                  asChild
+                  variant="outline"
+                  className="border-white bg-white/10 text-white hover:bg-white/20"
+                >
+                  <Link href="#partner">Become a Partner</Link>
+                </Button>
+              </div>
             </div>
-            <ApplyForm />
-          </div>
-        </TabsContent>
-
-        <TabsContent value="partner" className="mt-6">
-          <div className="grid gap-8 lg:grid-cols-2">
-            <div>
-              <h2 className="text-xl font-semibold text-[#20603e]">
-                Become a Partner
-              </h2>
-              <ul className="mt-2 list-disc space-y-2 pl-5 text-muted-foreground">
-                <li>Corporate partnerships</li>
-                <li>NGO collaborations</li>
-                <li>Government partnerships</li>
-                <li>Educational institution alliances</li>
-              </ul>
+            <div className="pl-20">
+              <Image
+                src="/placeholder-5j713.png"
+                width={100}
+                height={60}
+                alt="Women empowerment training session"
+                className="w-full rounded-xl border-none object-cover shadow-lg"
+              />
             </div>
-            <PartnerForm />
           </div>
-        </TabsContent>
+        </header>
+      </section>
 
-        <TabsContent value="volunteer" className="mt-6">
-          <div className="grid gap-8 lg:grid-cols-2">
-            <div>
-              <h2 className="text-xl font-semibold text-[#20603e]">
-                Volunteer with Us
-              </h2>
-              <ul className="mt-2 list-disc space-y-2 pl-5 text-muted-foreground">
-                <li>Training facilitation</li>
-                <li>Mentorship programs</li>
-                <li>Administrative support</li>
-                <li>Community outreach</li>
-              </ul>
+      {/* Ways to Get Involved Cards */}
+      <section className="container mx-auto px-6 mb-16">
+        <h2 className="text-3xl font-bold text-[#20603e] mb-8 text-center">
+          Ways to Make a Difference
+        </h2>
+        <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-4">
+          <div className="text-center p-6 border-2 border-emerald-50 rounded-lg hover:shadow-lg transition-shadow">
+            <div className="w-16 h-16 bg-[#20603e] rounded-full flex items-center justify-center mx-auto mb-4">
+              <GraduationCap className="h-8 w-8 text-white" />
             </div>
-            <VolunteerForm />
-          </div>
-        </TabsContent>
-
-        <TabsContent value="donate" className="mt-6">
-          <div className="rounded-xl border p-4">
-            <h2 className="text-xl font-semibold text-[#20603e]">
-              Make a Donation
-            </h2>
-            <p className="mt-2 max-w-prose text-muted-foreground">
-              Your support funds training, equipment, facilities, and
-              scholarships. Contact us to discuss donation options or in‑kind
-              support.
+            <h3 className="text-xl font-semibold text-[#20603e] mb-3">Apply</h3>
+            <p className="text-gray-600 mb-4">
+              Join our 8-month program and gain entrepreneurship, business, and
+              digital skills
             </p>
-            <a
-              href="/contact"
-              className="mt-4 inline-block rounded-md bg-[#f7ce04] px-4 py-2 text-sm font-medium text-black hover:bg-[#e0bc05]"
+            <Button
+              asChild
+              className="bg-[#20603e] text-white hover:bg-[#20603e]/90"
             >
-              Contact Us About Donations
-            </a>
+              <Link href="#apply">Apply Now</Link>
+            </Button>
           </div>
-        </TabsContent>
-      </Tabs>
-    </section>
+
+          <div className="border-2 border-emerald-50 rounded-lg p-6 text-center hover:shadow-lg transition-shadow">
+            <div className="w-16 h-16 bg-[#0b97d5] rounded-full flex items-center justify-center mx-auto mb-4">
+              <Handshake className="h-8 w-8 text-white" />
+            </div>
+            <h3 className="text-xl font-semibold text-[#0b97d5] mb-3">
+              Partner
+            </h3>
+            <p className="text-gray-600 mb-4">
+              Collaborate with us to expand our reach and create greater impact
+            </p>
+            <Button
+              asChild
+              className="bg-[#0b97d5] text-white hover:bg-[#0b97d5]/90"
+            >
+              <Link href="#partner">Partner With Us</Link>
+            </Button>
+          </div>
+
+          <div className="text-center p-6 border-2 border-emerald-50 rounded-lg hover:shadow-lg transition-shadow">
+            <div className="w-16 h-16 bg-[#f7ce04] rounded-full flex items-center justify-center mx-auto mb-4">
+              <Users className="h-8 w-8 text-black" />
+            </div>
+            <h3 className="text-xl font-semibold text-[#20603e] mb-3">
+              Volunteer
+            </h3>
+            <p className="text-gray-600 mb-4">
+              Share your skills and time to mentor and support women
+              entrepreneurs
+            </p>
+            <Button
+              asChild
+              className="bg-[#f7ce04] text-black hover:bg-[#e0bc05]"
+            >
+              <Link href="#volunteer">Join as Volunteer</Link>
+            </Button>
+          </div>
+
+          <div className="text-center p-6 border-2 border-emerald-50 rounded-lg hover:shadow-lg transition-shadow">
+            <div className="w-16 h-16 bg-slate-600 rounded-full flex items-center justify-center mx-auto mb-4">
+              <Heart className="h-8 w-8 text-white" />
+            </div>
+            <h3 className="text-xl font-semibold text-slate-600 mb-3">
+              Donate
+            </h3>
+            <p className="text-gray-600 mb-4">
+              Support our mission with financial contributions or in-kind
+              donations
+            </p>
+            <Button
+              asChild
+              className="bg-slate-600 text-white hover:bg-slate-600/90"
+            >
+              <Link href="#donate">Make a Donation</Link>
+            </Button>
+          </div>
+        </div>
+      </section>
+
+      {/* Program Impact Section */}
+      <section className="bg-gradient-to-br from-[#20603e]/5 to-[#0b97d5]/5 py-16 mb-16">
+        <div className="container mx-auto px-6">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl font-bold text-[#20603e] mb-4">
+              Creating Lasting Impact
+            </h2>
+            <p className="text-gray-600 max-w-3xl mx-auto">
+              Our comprehensive approach addresses key barriers women face in
+              entrepreneurship through targeted training, mentorship, and
+              financial support.
+            </p>
+          </div>
+          <div className="grid gap-6 md:grid-cols-3">
+            <div className="bg-white rounded-xl p-6 shadow-sm">
+              <h3 className="text-xl font-semibold text-[#20603e] mb-3">
+                Skills Development
+              </h3>
+              <p className="text-gray-600">
+                Digital literacy, business management, agricultural techniques,
+                and leadership skills training across agriculture, farming, and
+                business sectors.
+              </p>
+            </div>
+            <div className="bg-white rounded-xl p-6 shadow-sm">
+              <h3 className="text-xl font-semibold text-[#0b97d5] mb-3">
+                Financial Support
+              </h3>
+              <p className="text-gray-600">
+                $70 startup grants per participant, access to microfinance, and
+                support for cooperative farming initiatives.
+              </p>
+            </div>
+            <div className="bg-white rounded-xl p-6 shadow-sm">
+              <h3 className="text-xl font-semibold text-[#f7ce04] mb-3">
+                Community Networks
+              </h3>
+              <p className="text-gray-600">
+                Mentorship programs, peer support systems, and connections to
+                markets and business opportunities.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Detailed Tabs Section */}
+      <section className="container mx-auto px-6 mb-16">
+        <Tabs defaultValue="apply" className="mt-6">
+          <TabsList className="grid w-full grid-cols-4 bg-gray-50">
+            <TabsTrigger
+              value="apply"
+              id="apply"
+              className="data-[state=active]:bg-[#20603e] data-[state=active]:text-white"
+            >
+              Apply
+            </TabsTrigger>
+            <TabsTrigger
+              value="partner"
+              id="partner"
+              className="data-[state=active]:bg-[#0b97d5] data-[state=active]:text-white"
+            >
+              Partner
+            </TabsTrigger>
+            <TabsTrigger
+              value="volunteer"
+              id="volunteer"
+              className="data-[state=active]:bg-[#f7ce04] data-[state=active]:text-black"
+            >
+              Volunteer
+            </TabsTrigger>
+            <TabsTrigger
+              value="donate"
+              id="donate"
+              className="data-[state=active]:bg-slate-600 data-[state=active]:text-white"
+            >
+              Donate
+            </TabsTrigger>
+          </TabsList>
+
+          <TabsContent value="apply" className="mt-8">
+            <div>
+              {" "}
+              {/* Application Process - Horizontal Steps */}
+              <div className="bg-white mb-12">
+                <h2 className="text-2xl font-semibold text-[#20603e] mb-6">
+                  Application Process
+                </h2>
+                <div className="flex flex-col md:flex-row gap-4">
+                  <div className="flex-1 text-center p-4 bg-white rounded-lg border border-gray-200">
+                    <div className="w-8 h-8 bg-[#20603e] text-white rounded-full flex items-center justify-center text-sm font-bold mx-auto mb-2">
+                      1
+                    </div>
+                    <h3 className="font-semibold text-sm mb-1">
+                      Online Application
+                    </h3>
+                    <p className="text-xs text-gray-600">
+                      Complete the application form
+                    </p>
+                  </div>
+                  <div className="flex-1 text-center p-4 bg-white rounded-lg border border-gray-200">
+                    <div className="w-8 h-8 bg-[#0b97d5] text-white rounded-full flex items-center justify-center text-sm font-bold mx-auto mb-2">
+                      2
+                    </div>
+                    <h3 className="font-semibold text-sm mb-1">
+                      Community Recommendation
+                    </h3>
+                    <p className="text-xs text-gray-600">
+                      Get local leader endorsement
+                    </p>
+                  </div>
+                  <div className="flex-1 text-center p-4 bg-white rounded-lg border border-gray-200">
+                    <div className="w-8 h-8 bg-[#f7ce04] text-black rounded-full flex items-center justify-center text-sm font-bold mx-auto mb-2">
+                      3
+                    </div>
+                    <h3 className="font-semibold text-sm mb-1">Interview</h3>
+                    <p className="text-xs text-gray-600">
+                      In-person or virtual interview
+                    </p>
+                  </div>
+                  <div className="flex-1 text-center p-4 bg-white rounded-lg border border-gray-200">
+                    <div className="w-8 h-8 bg-slate-600 text-white rounded-full flex items-center justify-center text-sm font-bold mx-auto mb-2">
+                      4
+                    </div>
+                    <h3 className="font-semibold text-sm mb-1">Placement</h3>
+                    <p className="text-xs text-gray-600">
+                      Program placement notification
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div className="grid gap-8 lg:grid-cols-2">
+              <div className="space-y-8">
+                {/* Eligibility Requirements */}
+                <div>
+                  <h2 className="text-xl font-semibold text-[#20603e] mb-4">
+                    Eligibility Requirements
+                  </h2>
+                  <p className="text-gray-600 mb-4">
+                    To be eligible for our women empowerment program, you must
+                    meet the following criteria:
+                  </p>
+                  <ul className="space-y-3">
+                    <li className="flex items-start gap-3">
+                      <div className="w-2 h-2 bg-gray-600 rounded-full mt-2 flex-shrink-0"></div>
+                      <span className="text-gray-600">
+                        Women aged 18–45, resident of Rwanda
+                      </span>
+                    </li>
+                    <li className="flex items-start gap-3">
+                      <div className="w-2 h-2 bg-gray-600 rounded-full mt-2 flex-shrink-0"></div>
+                      <span className="text-gray-600">
+                        Motivated to start or grow a business in agriculture,
+                        farming, or other sectors
+                      </span>
+                    </li>
+                    <li className="flex items-start gap-3">
+                      <div className="w-2 h-2 bg-gray-600 rounded-full mt-2 flex-shrink-0"></div>
+                      <span className="text-gray-600">
+                        Available for full 8-month program commitment (2 months
+                        theory, 6 months practical)
+                      </span>
+                    </li>
+                    <li className="flex items-start gap-3">
+                      <div className="w-2 h-2 bg-gray-600 rounded-full mt-2 flex-shrink-0"></div>
+                      <span className="text-gray-600">
+                        Willing to mentor and support other women entrepreneurs
+                        after program completion
+                      </span>
+                    </li>
+                    <li className="flex items-start gap-3">
+                      <div className="w-2 h-2 bg-gray-600 rounded-full mt-2 flex-shrink-0"></div>
+                      <span className="text-gray-600">
+                        From underserved communities with limited access to
+                        formal education or resources
+                      </span>
+                    </li>
+                  </ul>
+                </div>
+
+                {/* Program Benefits */}
+                <div>
+                  <h2 className="text-xl font-semibold text-[#20603e] mb-4">
+                    What You'll Receive
+                  </h2>
+                  <p className="text-gray-600 mb-4">
+                    Our comprehensive program provides you with everything
+                    needed to transform your economic future:
+                  </p>
+                  <ul className="space-y-3">
+                    <li className="flex items-start gap-3">
+                      <div className="w-2 h-2 bg-gray-600 rounded-full mt-2 flex-shrink-0"></div>
+                      <span className="text-gray-600">
+                        8-month comprehensive training (theory + hands-on
+                        practice)
+                      </span>
+                    </li>
+                    <li className="flex items-start gap-3">
+                      <div className="w-2 h-2 bg-gray-600 rounded-full mt-2 flex-shrink-0"></div>
+                      <span className="text-gray-600">
+                        $70 startup grant to launch your business venture
+                      </span>
+                    </li>
+                    <li className="flex items-start gap-3">
+                      <div className="w-2 h-2 bg-gray-600 rounded-full mt-2 flex-shrink-0"></div>
+                      <span className="text-gray-600">
+                        Skills training in agriculture, farming, business
+                        management, and digital literacy
+                      </span>
+                    </li>
+                    <li className="flex items-start gap-3">
+                      <div className="w-2 h-2 bg-gray-600 rounded-full mt-2 flex-shrink-0"></div>
+                      <span className="text-gray-600">
+                        Personal mentorship from successful entrepreneurs
+                      </span>
+                    </li>
+                    <li className="flex items-start gap-3">
+                      <div className="w-2 h-2 bg-gray-600 rounded-full mt-2 flex-shrink-0"></div>
+                      <span className="text-gray-600">
+                        Access to business networks, markets, and cooperative
+                        farming opportunities
+                      </span>
+                    </li>
+                    <li className="flex items-start gap-3">
+                      <div className="w-2 h-2 bg-gray-600 rounded-full mt-2 flex-shrink-0"></div>
+                      <span className="text-gray-600">
+                        Ongoing support and lifetime access to alumni network
+                      </span>
+                    </li>
+                    <li className="flex items-start gap-3">
+                      <div className="w-2 h-2 bg-gray-600 rounded-full mt-2 flex-shrink-0"></div>
+                      <span className="text-gray-600">
+                        Certification upon successful program completion
+                      </span>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+
+              <div className="self-start justify-end">
+                <div className="bg-white rounded-xl ">
+                  <ApplyForm />
+                </div>
+              </div>
+            </div>
+          </TabsContent>
+
+          {/* Partner Section */}
+          <TabsContent value="partner" className="mt-8">
+            <div className="grid gap-8 lg:grid-cols-2">
+              <div className="space-y-8">
+                <div>
+                  <h2 className="text-2xl font-semibold text-[#0b97d5] mb-6">
+                    Partnership Opportunities
+                  </h2>
+                  <div className="space-y-6">
+                    <div>
+                      <h3 className="font-semibold text-[#20603e] mb-3">
+                        Corporate Partnerships
+                      </h3>
+                      <p className="text-gray-600 mb-2">
+                        Your corporate partnership directly funds training
+                        programs, provides modern equipment, and connects our
+                        trainees with industry mentors.
+                      </p>
+                      <ul className="space-y-2">
+                        <li className="flex items-start gap-3">
+                          <div className="w-2 h-2 bg-gray-600 rounded-full mt-2 flex-shrink-0"></div>
+                          <span className="text-gray-600 text-sm">
+                            Fund digital training centers and equipment for
+                            women in rural areas
+                          </span>
+                        </li>
+                        <li className="flex items-start gap-3">
+                          <div className="w-2 h-2 bg-gray-600 rounded-full mt-2 flex-shrink-0"></div>
+                          <span className="text-gray-600 text-sm">
+                            Provide expert mentors and industry connections for
+                            program graduates
+                          </span>
+                        </li>
+                        <li className="flex items-start gap-3">
+                          <div className="w-2 h-2 bg-gray-600 rounded-full mt-2 flex-shrink-0"></div>
+                          <span className="text-gray-600 text-sm">
+                            Create employment pathways and business
+                            opportunities for trained women
+                          </span>
+                        </li>
+                      </ul>
+                    </div>
+
+                    <div>
+                      <h3 className="font-semibold text-[#20603e] mb-3">
+                        NGO Collaborations
+                      </h3>
+                      <p className="text-gray-600 mb-2">
+                        Joint programming amplifies our reach, allowing us to
+                        support more women with comprehensive services.
+                      </p>
+                      <ul className="space-y-2">
+                        <li className="flex items-start gap-3">
+                          <div className="w-2 h-2 bg-gray-600 rounded-full mt-2 flex-shrink-0"></div>
+                          <span className="text-gray-600 text-sm">
+                            Expand program reach to underserved communities
+                          </span>
+                        </li>
+                        <li className="flex items-start gap-3">
+                          <div className="w-2 h-2 bg-gray-600 rounded-full mt-2 flex-shrink-0"></div>
+                          <span className="text-gray-600 text-sm">
+                            Provide holistic support including health and legal
+                            services
+                          </span>
+                        </li>
+                        <li className="flex items-start gap-3">
+                          <div className="w-2 h-2 bg-gray-600 rounded-full mt-2 flex-shrink-0"></div>
+                          <span className="text-gray-600 text-sm">
+                            Share resources to maximize impact per participant
+                          </span>
+                        </li>
+                      </ul>
+                    </div>
+
+                    <div>
+                      <h3 className="font-semibold text-[#20603e] mb-3">
+                        Government Partnerships
+                      </h3>
+                      <p className="text-gray-600 mb-2">
+                        Collaboration with government agencies ensures our
+                        programs align with national development goals and reach
+                        policy-level impact.
+                      </p>
+                      <ul className="space-y-2">
+                        <li className="flex items-start gap-3">
+                          <div className="w-2 h-2 bg-gray-600 rounded-full mt-2 flex-shrink-0"></div>
+                          <span className="text-gray-600 text-sm">
+                            Scale programs nationwide through government
+                            networks
+                          </span>
+                        </li>
+                        <li className="flex items-start gap-3">
+                          <div className="w-2 h-2 bg-gray-600 rounded-full mt-2 flex-shrink-0"></div>
+                          <span className="text-gray-600 text-sm">
+                            Advocate for policies that remove barriers for women
+                            entrepreneurs
+                          </span>
+                        </li>
+                        <li className="flex items-start gap-3">
+                          <div className="w-2 h-2 bg-gray-600 rounded-full mt-2 flex-shrink-0"></div>
+                          <span className="text-gray-600 text-sm">
+                            Connect trainees with government business support
+                            programs
+                          </span>
+                        </li>
+                      </ul>
+                    </div>
+
+                    <div>
+                      <h3 className="font-semibold text-[#20603e] mb-3">
+                        Educational Institutions
+                      </h3>
+                      <p className="text-gray-600 mb-2">
+                        Academic partnerships enhance our curriculum quality and
+                        provide pathways for continued education.
+                      </p>
+                      <ul className="space-y-2">
+                        <li className="flex items-start gap-3">
+                          <div className="w-2 h-2 bg-gray-600 rounded-full mt-2 flex-shrink-0"></div>
+                          <span className="text-gray-600 text-sm">
+                            Develop research-backed training curricula
+                          </span>
+                        </li>
+                        <li className="flex items-start gap-3">
+                          <div className="w-2 h-2 bg-gray-600 rounded-full mt-2 flex-shrink-0"></div>
+                          <span className="text-gray-600 text-sm">
+                            Provide certified training programs recognized by
+                            industry
+                          </span>
+                        </li>
+                        <li className="flex items-start gap-3">
+                          <div className="w-2 h-2 bg-gray-600 rounded-full mt-2 flex-shrink-0"></div>
+                          <span className="text-gray-600 text-sm">
+                            Create scholarship opportunities for exceptional
+                            participants
+                          </span>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+
+                <div>
+                  <h2 className="text-xl font-semibold text-[#0b97d5] mb-4">
+                    How Partnerships Transform Lives
+                  </h2>
+                  <p className="text-gray-600 mb-4">
+                    Every partnership directly translates to more women gaining
+                    economic independence, building sustainable businesses, and
+                    breaking the cycle of poverty in their communities.
+                    Together, we're not just training individuals - we're
+                    transforming entire families and communities across Rwanda.
+                  </p>
+                  <div className="bg-gradient-to-br from-[#0b97d5]/5 to-[#f7ce04]/5 rounded-xl p-4">
+                    <p className="text-sm text-gray-600 font-medium">
+                      "When you partner with us, you're directly enabling a
+                      woman to receive her $70 startup grant, access modern
+                      agricultural techniques, and build the digital skills
+                      needed to compete in today's economy."
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div className="self-start justify-end">
+                <div className="bg-white rounded-xl">
+                  <PartnerForm />
+                </div>
+              </div>
+            </div>
+          </TabsContent>
+
+          {/* Volunteer */}
+          <TabsContent value="volunteer" className="mt-8">
+            <div className="grid gap-8 lg:grid-cols-2">
+              <div className="space-y-8">
+                {/* Volunteer Requirements - Moved to top */}
+                <div>
+                  <h2 className="text-2xl font-semibold text-[#20603e] mb-4">
+                    Volunteer Requirements
+                  </h2>
+                  <p className="text-gray-600 mb-6">
+                    Join our mission to empower women entrepreneurs across
+                    Rwanda. Your time and expertise directly impact the women we
+                    train, helping them build sustainable businesses and
+                    transform their communities.
+                  </p>
+                  <ul className="space-y-4">
+                    <li className="flex items-start gap-3">
+                      <div className="w-2 h-2 bg-gray-600 rounded-full mt-2 flex-shrink-0"></div>
+                      <div>
+                        <span className="text-gray-600 font-medium">
+                          Minimum 3-month commitment
+                        </span>
+                        <p className="text-sm text-gray-500 mt-1">
+                          Consistency is key for building trust with
+                          participants and seeing meaningful progress in their
+                          entrepreneurial journey
+                        </p>
+                      </div>
+                    </li>
+                    <li className="flex items-start gap-3">
+                      <div className="w-2 h-2 bg-gray-600 rounded-full mt-2 flex-shrink-0"></div>
+                      <div>
+                        <span className="text-gray-600 font-medium">
+                          Relevant skills or experience preferred
+                        </span>
+                        <p className="text-sm text-gray-500 mt-1">
+                          Business, agriculture, digital skills, or teaching
+                          experience helps you provide valuable guidance to
+                          women starting their ventures
+                        </p>
+                      </div>
+                    </li>
+                    <li className="flex items-start gap-3">
+                      <div className="w-2 h-2 bg-gray-600 rounded-full mt-2 flex-shrink-0"></div>
+                      <div>
+                        <span className="text-gray-600 font-medium">
+                          Passion for women's empowerment
+                        </span>
+                        <p className="text-sm text-gray-500 mt-1">
+                          Genuine commitment to supporting women overcome
+                          barriers and achieve economic independence
+                        </p>
+                      </div>
+                    </li>
+                    <li className="flex items-start gap-3">
+                      <div className="w-2 h-2 bg-gray-600 rounded-full mt-2 flex-shrink-0"></div>
+                      <div>
+                        <span className="text-gray-600 font-medium">
+                          Ability to work in rural communities
+                        </span>
+                        <p className="text-sm text-gray-500 mt-1">
+                          Many participants are in rural areas where your impact
+                          is most needed - willingness to travel and work in
+                          diverse settings
+                        </p>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+
+                {/* Volunteer Roles */}
+                <div>
+                  <h2 className="text-2xl font-semibold text-[#20603e] mb-6">
+                    How You Can Help Our Trainees
+                  </h2>
+                  <div className="space-y-6">
+                    <div>
+                      <h3 className="font-semibold text-[#20603e] mb-3">
+                        Training Facilitators
+                      </h3>
+                      <p className="text-gray-600 mb-2">
+                        Lead workshops that directly equip women with the
+                        business skills, digital literacy, and agricultural
+                        techniques they need to launch successful ventures.
+                      </p>
+                      <ul className="space-y-2">
+                        <li className="flex items-start gap-3">
+                          <div className="w-2 h-2 bg-gray-600 rounded-full mt-2 flex-shrink-0"></div>
+                          <span className="text-gray-600 text-sm">
+                            Teach practical business planning and financial
+                            management
+                          </span>
+                        </li>
+                        <li className="flex items-start gap-3">
+                          <div className="w-2 h-2 bg-gray-600 rounded-full mt-2 flex-shrink-0"></div>
+                          <span className="text-gray-600 text-sm">
+                            Provide hands-on digital skills training for market
+                            access
+                          </span>
+                        </li>
+                        <li className="flex items-start gap-3">
+                          <div className="w-2 h-2 bg-gray-600 rounded-full mt-2 flex-shrink-0"></div>
+                          <span className="text-gray-600 text-sm">
+                            Share modern farming techniques that increase
+                            productivity
+                          </span>
+                        </li>
+                      </ul>
+                    </div>
+
+                    <div>
+                      <h3 className="font-semibold text-[#20603e] mb-3">
+                        Mentorship Program
+                      </h3>
+                      <p className="text-gray-600 mb-2">
+                        Provide one-on-one guidance that transforms women from
+                        uncertain beginners into confident entrepreneurs ready
+                        to launch their $70 startup ventures.
+                      </p>
+                      <ul className="space-y-2">
+                        <li className="flex items-start gap-3">
+                          <div className="w-2 h-2 bg-gray-600 rounded-full mt-2 flex-shrink-0"></div>
+                          <span className="text-gray-600 text-sm">
+                            Guide business idea development and validation
+                          </span>
+                        </li>
+                        <li className="flex items-start gap-3">
+                          <div className="w-2 h-2 bg-gray-600 rounded-full mt-2 flex-shrink-0"></div>
+                          <span className="text-gray-600 text-sm">
+                            Support with startup grant application and business
+                            launch
+                          </span>
+                        </li>
+                        <li className="flex items-start gap-3">
+                          <div className="w-2 h-2 bg-gray-600 rounded-full mt-2 flex-shrink-0"></div>
+                          <span className="text-gray-600 text-sm">
+                            Provide ongoing support during the 6-month practical
+                            phase
+                          </span>
+                        </li>
+                      </ul>
+                    </div>
+
+                    <div>
+                      <h3 className="font-semibold text-[#20603e] mb-3">
+                        Administrative Support
+                      </h3>
+                      <p className="text-gray-600 mb-2">
+                        Help streamline our operations so more resources go
+                        directly to training women and supporting their
+                        entrepreneurial dreams.
+                      </p>
+                      <ul className="space-y-2">
+                        <li className="flex items-start gap-3">
+                          <div className="w-2 h-2 bg-gray-600 rounded-full mt-2 flex-shrink-0"></div>
+                          <span className="text-gray-600 text-sm">
+                            Track participant progress and success stories
+                          </span>
+                        </li>
+                        <li className="flex items-start gap-3">
+                          <div className="w-2 h-2 bg-gray-600 rounded-full mt-2 flex-shrink-0"></div>
+                          <span className="text-gray-600 text-sm">
+                            Coordinate training schedules and resource
+                            distribution
+                          </span>
+                        </li>
+                        <li className="flex items-start gap-3">
+                          <div className="w-2 h-2 bg-gray-600 rounded-full mt-2 flex-shrink-0"></div>
+                          <span className="text-gray-600 text-sm">
+                            Manage startup grant disbursements and follow-up
+                          </span>
+                        </li>
+                      </ul>
+                    </div>
+
+                    <div>
+                      <h3 className="font-semibold text-[#20603e] mb-3">
+                        Community Outreach
+                      </h3>
+                      <p className="text-gray-600 mb-2">
+                        Help identify and recruit women who need our programs
+                        most, ensuring we reach those facing the greatest
+                        barriers to economic participation.
+                      </p>
+                      <ul className="space-y-2">
+                        <li className="flex items-start gap-3">
+                          <div className="w-2 h-2 bg-gray-600 rounded-full mt-2 flex-shrink-0"></div>
+                          <span className="text-gray-600 text-sm">
+                            Connect with women in underserved rural communities
+                          </span>
+                        </li>
+                        <li className="flex items-start gap-3">
+                          <div className="w-2 h-2 bg-gray-600 rounded-full mt-2 flex-shrink-0"></div>
+                          <span className="text-gray-600 text-sm">
+                            Build relationships with local leaders and
+                            organizations
+                          </span>
+                        </li>
+                        <li className="flex items-start gap-3">
+                          <div className="w-2 h-2 bg-gray-600 rounded-full mt-2 flex-shrink-0"></div>
+                          <span className="text-gray-600 text-sm">
+                            Share success stories that inspire more women to
+                            apply
+                          </span>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+
+                <div className="bg-gradient-to-br from-gray-50 to-gray-100/50 rounded-xl p-6 border border-gray-200">
+                  <h2 className="text-xl font-semibold text-[#20603e] mb-4">
+                    Your Impact as a Volunteer
+                  </h2>
+                  <p className="text-gray-600 mb-4">
+                    Every hour you volunteer directly contributes to a woman's
+                    journey from uncertainty to entrepreneurship. You're not
+                    just teaching skills - you're helping break the cycle of
+                    poverty and empowering entire families and communities.
+                  </p>
+                  <p className="text-sm text-gray-600 font-medium">
+                    "As a volunteer, you become part of each woman's success
+                    story - from her first day of training to the moment she
+                    launches her business with her $70 startup grant."
+                  </p>
+                </div>
+              </div>
+
+              <div className="self-start">
+                <div className="bg-white rounded-xl border-2 border-gray-200 p-6">
+                  <VolunteerForm />
+                </div>
+              </div>
+            </div>
+          </TabsContent>
+
+          {/*Donation*/}
+
+          <TabsContent value="donate" className="mt-8">
+            <div className="grid gap-12 lg:grid-cols-3">
+              <div className="lg:col-span-2 space-y-8">
+                {/* Impact Overview */}
+                <div>
+                  <h2 className="text-3xl font-semibold text-slate-600 mb-6">
+                    Transform Lives Through Your Support
+                  </h2>
+                  <p className="text-gray-600 text-lg mb-6">
+                    Every donation directly empowers women in Rwanda to break
+                    barriers, start businesses, and transform their communities.
+                    Your support provides the training, resources, and capital
+                    that turns entrepreneurial dreams into reality.
+                  </p>
+
+                  <div className="bg-gradient-to-br from-slate-600/5 to-[#20603e]/5 rounded-xl p-6 mb-8">
+                    <h3 className="text-xl font-semibold text-[#20603e] mb-3">
+                      Our Goal: Empowering 1 Million Women
+                    </h3>
+                    <p className="text-gray-600">
+                      With your help, we're working to reach 1 million women
+                      across Rwanda over the next three years, providing each
+                      with comprehensive training and a $70 startup grant to
+                      launch their businesses.
+                    </p>
+                  </div>
+                </div>
+
+                {/* How Your Donation Helps */}
+                <div>
+                  <h2 className="text-2xl font-semibold text-slate-600 mb-6">
+                    How Your Donation Creates Real Impact
+                  </h2>
+
+                  <div className="grid gap-4 md:grid-cols-2">
+                    <div className="p-6 bg-gradient-to-r from-[#20603e]/10 to-transparent rounded-lg">
+                      <h3 className="font-bold text-[#20603e] text-2xl mb-2">
+                        $70
+                      </h3>
+                      <p className="text-gray-600 font-medium mb-2">
+                        Complete startup grant for one woman
+                      </p>
+                      <p className="text-gray-500 text-sm">
+                        Provides seed capital to launch a business in
+                        agriculture, farming, or other sectors after completing
+                        our 8-month training program.
+                      </p>
+                    </div>
+
+                    <div className="p-6 bg-gradient-to-r from-[#0b97d5]/10 to-transparent rounded-lg">
+                      <h3 className="font-bold text-[#0b97d5] text-2xl mb-2">
+                        $200
+                      </h3>
+                      <p className="text-gray-600 font-medium mb-2">
+                        Training materials & equipment for one participant
+                      </p>
+                      <p className="text-gray-500 text-sm">
+                        Covers digital devices, training materials, and
+                        practical tools needed throughout the 8-month program.
+                      </p>
+                    </div>
+
+                    <div className="p-6 bg-gradient-to-r from-[#f7ce04]/10 to-transparent rounded-lg">
+                      <h3 className="font-bold text-[#20603e] text-2xl mb-2">
+                        $500
+                      </h3>
+                      <p className="text-gray-600 font-medium mb-2">
+                        Complete program sponsorship for one woman
+                      </p>
+                      <p className="text-gray-500 text-sm">
+                        Covers full 8-month training program plus $70 startup
+                        grant - everything needed to transform one woman's
+                        economic future.
+                      </p>
+                    </div>
+
+                    <div className="p-6 bg-gradient-to-r from-slate-500/10 to-transparent rounded-lg">
+                      <h3 className="font-bold text-slate-600 text-2xl mb-2">
+                        $2,500
+                      </h3>
+                      <p className="text-gray-600 font-medium mb-2">
+                        Establishes one community training center
+                      </p>
+                      <p className="text-gray-500 text-sm">
+                        Sets up a digital hub in rural areas with computers,
+                        internet access, and training facilities for ongoing
+                        programs.
+                      </p>
+                    </div>
+
+                    <div className="p-6 bg-gradient-to-r from-[#20603e]/10 to-transparent rounded-lg md:col-span-2">
+                      <h3 className="font-bold text-[#20603e] text-2xl mb-2">
+                        $15,000
+                      </h3>
+                      <p className="text-gray-600 font-medium mb-2">
+                        Sponsors complete rural district program
+                      </p>
+                      <p className="text-gray-500 text-sm">
+                        Funds training for 30 women including facilities,
+                        trainers, materials, and startup grants - transforming
+                        an entire community.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+
+                {/* In-Kind Donations */}
+                <div>
+                  <h2 className="text-2xl font-semibold text-slate-600 mb-6">
+                    Other Ways to Support Our Mission
+                  </h2>
+                  <p className="text-gray-600 mb-4">
+                    Beyond financial contributions, in-kind donations help us
+                    stretch every dollar further and provide more comprehensive
+                    support to the women in our programs.
+                  </p>
+
+                  <div className="grid gap-6 md:grid-cols-2">
+                    <div>
+                      <h3 className="font-semibold text-[#20603e] mb-3">
+                        Technology & Equipment
+                      </h3>
+                      <ul className="space-y-2">
+                        <li className="flex items-start gap-3">
+                          <div className="w-2 h-2 bg-slate-600 rounded-full mt-2 flex-shrink-0"></div>
+                          <span className="text-gray-600">
+                            Computers and tablets for digital skills training
+                          </span>
+                        </li>
+                        <li className="flex items-start gap-3">
+                          <div className="w-2 h-2 bg-slate-600 rounded-full mt-2 flex-shrink-0"></div>
+                          <span className="text-gray-600">
+                            Agricultural tools and modern farming equipment
+                          </span>
+                        </li>
+                        <li className="flex items-start gap-3">
+                          <div className="w-2 h-2 bg-slate-600 rounded-full mt-2 flex-shrink-0"></div>
+                          <span className="text-gray-600">
+                            Solar panels and renewable energy solutions
+                          </span>
+                        </li>
+                      </ul>
+                    </div>
+
+                    <div>
+                      <h3 className="font-semibold text-[#20603e] mb-3">
+                        Professional Services
+                      </h3>
+                      <ul className="space-y-2">
+                        <li className="flex items-start gap-3">
+                          <div className="w-2 h-2 bg-slate-600 rounded-full mt-2 flex-shrink-0"></div>
+                          <span className="text-gray-600">
+                            Business mentorship and coaching expertise
+                          </span>
+                        </li>
+                        <li className="flex items-start gap-3">
+                          <div className="w-2 h-2 bg-slate-600 rounded-full mt-2 flex-shrink-0"></div>
+                          <span className="text-gray-600">
+                            Training curriculum development
+                          </span>
+                        </li>
+                        <li className="flex items-start gap-3">
+                          <div className="w-2 h-2 bg-slate-600 rounded-full mt-2 flex-shrink-0"></div>
+                          <span className="text-gray-600">
+                            Marketing and communication support
+                          </span>
+                        </li>
+                      </ul>
+                    </div>
+
+                    <div>
+                      <h3 className="font-semibold text-[#20603e] mb-3">
+                        Facilities & Resources
+                      </h3>
+                      <ul className="space-y-2">
+                        <li className="flex items-start gap-3">
+                          <div className="w-2 h-2 bg-slate-600 rounded-full mt-2 flex-shrink-0"></div>
+                          <span className="text-gray-600">
+                            Venue space for training sessions and workshops
+                          </span>
+                        </li>
+                        <li className="flex items-start gap-3">
+                          <div className="w-2 h-2 bg-slate-600 rounded-full mt-2 flex-shrink-0"></div>
+                          <span className="text-gray-600">
+                            Transportation for rural outreach programs
+                          </span>
+                        </li>
+                        <li className="flex items-start gap-3">
+                          <div className="w-2 h-2 bg-slate-600 rounded-full mt-2 flex-shrink-0"></div>
+                          <span className="text-gray-600">
+                            Office furniture and administrative supplies
+                          </span>
+                        </li>
+                      </ul>
+                    </div>
+
+                    <div>
+                      <h3 className="font-semibold text-[#20603e] mb-3">
+                        Educational Materials
+                      </h3>
+                      <ul className="space-y-2">
+                        <li className="flex items-start gap-3">
+                          <div className="w-2 h-2 bg-slate-600 rounded-full mt-2 flex-shrink-0"></div>
+                          <span className="text-gray-600">
+                            Training manuals and educational resources
+                          </span>
+                        </li>
+                        <li className="flex items-start gap-3">
+                          <div className="w-2 h-2 bg-slate-600 rounded-full mt-2 flex-shrink-0"></div>
+                          <span className="text-gray-600">
+                            Software licenses for business and design training
+                          </span>
+                        </li>
+                        <li className="flex items-start gap-3">
+                          <div className="w-2 h-2 bg-slate-600 rounded-full mt-2 flex-shrink-0"></div>
+                          <span className="text-gray-600">
+                            Books and reference materials
+                          </span>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+
+                {/* Impact Stories */}
+                <div className="bg-gradient-to-br from-[#20603e]/5 to-[#f7ce04]/10 rounded-xl p-8">
+                  <h2 className="text-2xl font-semibold text-[#20603e] mb-4">
+                    Your Donation's Journey
+                  </h2>
+                  <div className="space-y-4">
+                    <p className="text-gray-600">
+                      <strong>When you donate $500</strong>, you're not just
+                      giving money - you're providing:
+                    </p>
+                    <ul className="space-y-2 ml-4">
+                      <li className="text-gray-600">
+                        • 2 months of comprehensive theory training for one
+                        woman
+                      </li>
+                      <li className="text-gray-600">
+                        • 6 months of hands-on practical business development
+                      </li>
+                      <li className="text-gray-600">
+                        • Digital skills training that opens new market
+                        opportunities
+                      </li>
+                      <li className="text-gray-600">
+                        • Access to mentorship and ongoing support networks
+                      </li>
+                      <li className="text-gray-600">
+                        • A $70 startup grant to launch her business venture
+                      </li>
+                      <li className="text-gray-600">
+                        • The confidence and skills to become a community leader
+                      </li>
+                    </ul>
+                    <p className="text-gray-600 font-medium pt-2">
+                      This transforms not just one woman's life, but creates a
+                      ripple effect that benefits her family, community, and
+                      contributes to Rwanda's economic development.
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              {/* Contact Information - Right Column */}
+              <div className="lg:col-span-1">
+                <div className="bg-white rounded-xl border-2 border-slate-600/10 p-6 sticky top-6">
+                  <h2 className="text-xl font-semibold text-slate-600 mb-4">
+                    Ready to Make an Impact?
+                  </h2>
+                  <p className="text-gray-600 mb-6">
+                    Contact us to discuss your donation and learn more about how
+                    your contribution will directly support women entrepreneurs
+                    in Rwanda.
+                  </p>
+
+                  <div className="space-y-4 mb-6">
+                    <div className="flex items-center gap-3">
+                      <Mail className="h-5 w-5 text-[#20603e]" />
+                      <div>
+                        <p className="font-medium text-gray-900">Email</p>
+                        <p className="text-sm text-gray-600">
+                          info@empowerwomenrwanda.org
+                        </p>
+                      </div>
+                    </div>
+                    <div className="flex items-center gap-3">
+                      <Phone className="h-5 w-5 text-[#20603e]" />
+                      <div>
+                        <p className="font-medium text-gray-900">Phone</p>
+                        <p className="text-sm text-gray-600">
+                          +250 788 123 456
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div className="space-y-3">
+                    <Button
+                      asChild
+                      className="w-full bg-slate-600 text-white hover:bg-slate-600/90"
+                    >
+                      <Link href="/#contact">Contact About Donations</Link>
+                    </Button>
+                    <Button
+                      asChild
+                      variant="outline"
+                      className="w-full border-[#20603e] text-[#20603e] hover:bg-[#20603e]/10"
+                    >
+                      <Link href="/#contact">Discuss In-Kind Support</Link>
+                    </Button>
+                  </div>
+
+                  <div className="mt-6 pt-6 border-t border-gray-200">
+                    <p className="text-xs text-gray-500 text-center">
+                      Empower Women Rwanda is committed to transparent use of
+                      funds. All donations go directly to program implementation
+                      and participant support.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </TabsContent>
+        </Tabs>
+      </section>
+    </div>
   );
 }
