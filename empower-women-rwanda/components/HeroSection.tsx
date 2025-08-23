@@ -8,7 +8,7 @@ type Props = {
 };
 
 export default function HeroV2({
-  headline = "Empower Her Future Through Doing the Right Things",
+  headline = "Empowering Rwandan Women to Lead in Business and Technology",
   subheadline = "Transforming the lives of Rwandan women through education, entrepreneurship, and leadership development",
 }: Props) {
   return (

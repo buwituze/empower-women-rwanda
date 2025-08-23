@@ -1,5 +1,5 @@
 import type React from "react";
-import HeroV2 from "@/components/HeroSection";
+import HeroV2 from "@/components/HerosectionShuffle";
 import { ProgramCard } from "@/components/proogram-card";
 import { TestimonialSection } from "@/components/testimonial-section";
 import { FAQSection } from "@/components/faq-section";
