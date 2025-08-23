@@ -9,18 +9,14 @@ export default function Footer() {
       <div className="container mx-auto px-4">
         <div className="grid md:grid-cols-4 gap-8">
           <div className="space-y-4">
-            <div className="flex items-center space-x-3">
+            <div className="flex items-center">
               <Image
-                src="/images/logo.png"
+                src="/EMPOWER-footer.jpg"
                 alt="Empower Women Rwanda Logo"
-                width={40}
-                height={40}
+                width={210}
+                height={180}
                 className="rounded-lg"
               />
-              <div>
-                <h3 className="font-bold">Empower Women Rwanda</h3>
-                <p className="text-sm text-slate-400">We Do The Right Thing</p>
-              </div>
             </div>
             <p className="text-slate-400 text-sm">
               Transforming lives through education, leadership, and
