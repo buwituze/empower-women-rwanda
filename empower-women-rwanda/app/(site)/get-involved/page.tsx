@@ -229,6 +229,7 @@ export default function GetInvolvedPage() {
             </TabsTrigger>
           </TabsList>
 
+          {/* Apply Content */}
           <TabsContent value="apply" className="mt-8">
             <div>
               {" "}
@@ -815,30 +816,35 @@ export default function GetInvolvedPage() {
                     Transform Lives Through Your Support
                   </h2>
                   <p className="text-gray-600 text-lg mb-6">
-                    Every donation directly empowers women in Rwanda to break
-                    barriers, start businesses, and transform their communities.
-                    Your support provides the training, resources, and capital
-                    that turns entrepreneurial dreams into reality.
+                    Every contribution, no matter the size, directly empowers
+                    women in Rwanda to break barriers and build sustainable
+                    businesses. Your support provides the training, resources,
+                    and startup capital that transforms entrepreneurial dreams
+                    into thriving enterprises.
                   </p>
 
                   <div className="bg-gradient-to-br from-slate-600/5 to-[#20603e]/5 rounded-xl p-6 mb-8">
                     <h3 className="text-xl font-semibold text-[#20603e] mb-3">
-                      Our Goal: Empowering 1 Million Women
+                      Together: Empowering 1 Million Women
                     </h3>
                     <p className="text-gray-600">
-                      With your help, we're working to reach 1 million women
-                      across Rwanda over the next three years, providing each
-                      with comprehensive training and a $70 startup grant to
-                      launch their businesses.
+                      With collective support from you, we aim to reach 1
+                      million women across Rwanda over three years, providing
+                      comprehensive training and startup grants to launch their
+                      businesses. Every contribution matters.
                     </p>
                   </div>
                 </div>
 
                 {/* How Your Donation Helps */}
                 <div>
-                  <h2 className="text-2xl font-semibold text-slate-600 mb-6">
-                    How Your Donation Creates Real Impact
+                  <h2 className="text-2xl font-semibold text-slate-600 mb-4">
+                    Your Contribution Creates Real Impact
                   </h2>
+                  <p className="text-gray-600 mb-6">
+                    Whether large or small, every contribution directly supports
+                    women entrepreneurs. Here's how different amounts help:
+                  </p>
 
                   <div className="grid gap-4 md:grid-cols-2">
                     <div className="p-6 bg-gradient-to-r from-[#20603e]/10 to-transparent rounded-lg">
@@ -846,12 +852,11 @@ export default function GetInvolvedPage() {
                         $70
                       </h3>
                       <p className="text-gray-600 font-medium mb-2">
-                        Complete startup grant for one woman
+                        Startup grant for one woman
                       </p>
                       <p className="text-gray-500 text-sm">
-                        Provides seed capital to launch a business in
-                        agriculture, farming, or other sectors after completing
-                        our 8-month training program.
+                        Seed capital to launch a business after completing
+                        training.
                       </p>
                     </div>
 
@@ -860,11 +865,11 @@ export default function GetInvolvedPage() {
                         $200
                       </h3>
                       <p className="text-gray-600 font-medium mb-2">
-                        Training materials & equipment for one participant
+                        Training materials & equipment
                       </p>
                       <p className="text-gray-500 text-sm">
-                        Covers digital devices, training materials, and
-                        practical tools needed throughout the 8-month program.
+                        Digital devices and practical tools for the 8-month
+                        program.
                       </p>
                     </div>
 
@@ -873,12 +878,10 @@ export default function GetInvolvedPage() {
                         $500
                       </h3>
                       <p className="text-gray-600 font-medium mb-2">
-                        Complete program sponsorship for one woman
+                        Complete program sponsorship
                       </p>
                       <p className="text-gray-500 text-sm">
-                        Covers full 8-month training program plus $70 startup
-                        grant - everything needed to transform one woman's
-                        economic future.
+                        Full training program plus startup grant for one woman.
                       </p>
                     </div>
 
@@ -887,58 +890,44 @@ export default function GetInvolvedPage() {
                         $2,500
                       </h3>
                       <p className="text-gray-600 font-medium mb-2">
-                        Establishes one community training center
+                        Community training center
                       </p>
                       <p className="text-gray-500 text-sm">
-                        Sets up a digital hub in rural areas with computers,
-                        internet access, and training facilities for ongoing
-                        programs.
+                        Digital hub with computers and internet in rural areas.
                       </p>
                     </div>
+                  </div>
 
-                    <div className="p-6 bg-gradient-to-r from-[#20603e]/10 to-transparent rounded-lg md:col-span-2">
-                      <h3 className="font-bold text-[#20603e] text-2xl mb-2">
-                        $15,000
-                      </h3>
-                      <p className="text-gray-600 font-medium mb-2">
-                        Sponsors complete rural district program
-                      </p>
-                      <p className="text-gray-500 text-sm">
-                        Funds training for 30 women including facilities,
-                        trainers, materials, and startup grants - transforming
-                        an entire community.
-                      </p>
-                    </div>
+                  <div className="mt-6 p-4 bg-gradient-to-r from-[#f7ce04]/10 to-[#20603e]/10 rounded-lg">
+                    <p className="text-gray-600 text-center">
+                      <strong>Every amount makes a difference.</strong> Can't
+                      contribute these amounts? Any contribution helps us reach
+                      more women and build stronger programs. We welcome
+                      whatever you can offer.
+                    </p>
                   </div>
                 </div>
 
                 {/* In-Kind Donations */}
                 <div>
-                  <h2 className="text-2xl font-semibold text-slate-600 mb-6">
-                    Other Ways to Support Our Mission
+                  <h2 className="text-2xl font-semibold text-slate-600 mb-4">
+                    Beyond Financial Support
                   </h2>
-                  <p className="text-gray-600 mb-4">
-                    Beyond financial contributions, in-kind donations help us
-                    stretch every dollar further and provide more comprehensive
-                    support to the women in our programs.
+                  <p className="text-gray-600 mb-6">
+                    In-kind donations help us maximize every contribution and
+                    provide comprehensive support to women entrepreneurs.
                   </p>
 
                   <div className="grid gap-6 md:grid-cols-2">
                     <div>
                       <h3 className="font-semibold text-[#20603e] mb-3">
-                        Technology & Equipment
+                        Equipment & Technology
                       </h3>
                       <ul className="space-y-2">
                         <li className="flex items-start gap-3">
                           <div className="w-2 h-2 bg-slate-600 rounded-full mt-2 flex-shrink-0"></div>
                           <span className="text-gray-600">
-                            Computers and tablets for digital skills training
-                          </span>
-                        </li>
-                        <li className="flex items-start gap-3">
-                          <div className="w-2 h-2 bg-slate-600 rounded-full mt-2 flex-shrink-0"></div>
-                          <span className="text-gray-600">
-                            Agricultural tools and modern farming equipment
+                            Computers, tablets, agricultural tools
                           </span>
                         </li>
                         <li className="flex items-start gap-3">
@@ -958,71 +947,13 @@ export default function GetInvolvedPage() {
                         <li className="flex items-start gap-3">
                           <div className="w-2 h-2 bg-slate-600 rounded-full mt-2 flex-shrink-0"></div>
                           <span className="text-gray-600">
-                            Business mentorship and coaching expertise
+                            Business mentorship and expertise
                           </span>
                         </li>
                         <li className="flex items-start gap-3">
                           <div className="w-2 h-2 bg-slate-600 rounded-full mt-2 flex-shrink-0"></div>
                           <span className="text-gray-600">
-                            Training curriculum development
-                          </span>
-                        </li>
-                        <li className="flex items-start gap-3">
-                          <div className="w-2 h-2 bg-slate-600 rounded-full mt-2 flex-shrink-0"></div>
-                          <span className="text-gray-600">
-                            Marketing and communication support
-                          </span>
-                        </li>
-                      </ul>
-                    </div>
-
-                    <div>
-                      <h3 className="font-semibold text-[#20603e] mb-3">
-                        Facilities & Resources
-                      </h3>
-                      <ul className="space-y-2">
-                        <li className="flex items-start gap-3">
-                          <div className="w-2 h-2 bg-slate-600 rounded-full mt-2 flex-shrink-0"></div>
-                          <span className="text-gray-600">
-                            Venue space for training sessions and workshops
-                          </span>
-                        </li>
-                        <li className="flex items-start gap-3">
-                          <div className="w-2 h-2 bg-slate-600 rounded-full mt-2 flex-shrink-0"></div>
-                          <span className="text-gray-600">
-                            Transportation for rural outreach programs
-                          </span>
-                        </li>
-                        <li className="flex items-start gap-3">
-                          <div className="w-2 h-2 bg-slate-600 rounded-full mt-2 flex-shrink-0"></div>
-                          <span className="text-gray-600">
-                            Office furniture and administrative supplies
-                          </span>
-                        </li>
-                      </ul>
-                    </div>
-
-                    <div>
-                      <h3 className="font-semibold text-[#20603e] mb-3">
-                        Educational Materials
-                      </h3>
-                      <ul className="space-y-2">
-                        <li className="flex items-start gap-3">
-                          <div className="w-2 h-2 bg-slate-600 rounded-full mt-2 flex-shrink-0"></div>
-                          <span className="text-gray-600">
-                            Training manuals and educational resources
-                          </span>
-                        </li>
-                        <li className="flex items-start gap-3">
-                          <div className="w-2 h-2 bg-slate-600 rounded-full mt-2 flex-shrink-0"></div>
-                          <span className="text-gray-600">
-                            Software licenses for business and design training
-                          </span>
-                        </li>
-                        <li className="flex items-start gap-3">
-                          <div className="w-2 h-2 bg-slate-600 rounded-full mt-2 flex-shrink-0"></div>
-                          <span className="text-gray-600">
-                            Books and reference materials
+                            Training materials and venue space
                           </span>
                         </li>
                       </ul>
@@ -1031,43 +962,24 @@ export default function GetInvolvedPage() {
                 </div>
 
                 {/* Impact Stories */}
-                <div className="bg-gradient-to-br from-[#20603e]/5 to-[#f7ce04]/10 rounded-xl p-8">
+                <div className="bg-gradient-to-br from-[#20603e]/5 to-[#f7ce04]/10 rounded-xl p-6">
                   <h2 className="text-2xl font-semibold text-[#20603e] mb-4">
-                    Your Donation's Journey
+                    Your Support Creates Lasting Change
                   </h2>
-                  <div className="space-y-4">
-                    <p className="text-gray-600">
-                      <strong>When you donate $500</strong>, you're not just
-                      giving money - you're providing:
-                    </p>
-                    <ul className="space-y-2 ml-4">
-                      <li className="text-gray-600">
-                        • 2 months of comprehensive theory training for one
-                        woman
-                      </li>
-                      <li className="text-gray-600">
-                        • 6 months of hands-on practical business development
-                      </li>
-                      <li className="text-gray-600">
-                        • Digital skills training that opens new market
-                        opportunities
-                      </li>
-                      <li className="text-gray-600">
-                        • Access to mentorship and ongoing support networks
-                      </li>
-                      <li className="text-gray-600">
-                        • A $70 startup grant to launch her business venture
-                      </li>
-                      <li className="text-gray-600">
-                        • The confidence and skills to become a community leader
-                      </li>
-                    </ul>
-                    <p className="text-gray-600 font-medium pt-2">
-                      This transforms not just one woman's life, but creates a
-                      ripple effect that benefits her family, community, and
-                      contributes to Rwanda's economic development.
-                    </p>
-                  </div>
+                  <p className="text-gray-600 mb-4">
+                    Every contribution - whether it's covering a startup grant,
+                    providing training materials, or supporting a full program -
+                    transforms lives and builds stronger communities across
+                    Rwanda.
+                  </p>
+                  <p className="text-gray-600">
+                    <strong>
+                      Your impact extends far beyond the individual:
+                    </strong>{" "}
+                    Each woman trained becomes a mentor to others, creates jobs
+                    in her community, and raises the next generation with
+                    entrepreneurial skills and economic independence.
+                  </p>
                 </div>
               </div>
 
@@ -1109,14 +1021,14 @@ export default function GetInvolvedPage() {
                       asChild
                       className="w-full bg-slate-600 text-white hover:bg-slate-600/90"
                     >
-                      <Link href="/#contact">Contact About Donations</Link>
+                      <Link href="#contact">Contact About Donations</Link>
                     </Button>
                     <Button
                       asChild
                       variant="outline"
                       className="w-full border-[#20603e] text-[#20603e] hover:bg-[#20603e]/10"
                     >
-                      <Link href="/#contact">Discuss In-Kind Support</Link>
+                      <Link href="#contact">Discuss In-Kind Support</Link>
                     </Button>
                   </div>
 
