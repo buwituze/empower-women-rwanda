@@ -27,7 +27,7 @@ export default function DonatePage() {
               </h3>
               <p className="text-gray-600">
                 With your help, we're working to reach 1 million women across
-                Rwanda over the next three years, providing each with
+                Rwanda over the next five years, providing each with
                 comprehensive training and a $70 startup grant to launch their
                 businesses.
               </p>
@@ -48,7 +48,7 @@ export default function DonatePage() {
                 </p>
                 <p className="text-gray-500 text-sm">
                   Provides seed capital to launch a business in agriculture,
-                  farming, or other sectors after completing our 8-month
+                  farming, or other sectors after completing our 6-month
                   training program.
                 </p>
               </div>
@@ -237,7 +237,7 @@ export default function DonatePage() {
                   • 2 months of comprehensive theory training for one woman
                 </li>
                 <li className="text-gray-600">
-                  • 6 months of hands-on practical business development
+                  • 4 months of hands-on practical business development
                 </li>
                 <li className="text-gray-600">
                   • Digital skills training that opens new market opportunities
@@ -278,7 +278,7 @@ export default function DonatePage() {
                 <div>
                   <p className="font-medium text-gray-900">Email</p>
                   <p className="text-sm text-gray-600">
-                    info@empowerwomenrwanda.org
+                    empowerwomenrw@gmail.com
                   </p>
                 </div>
               </div>
@@ -286,7 +286,7 @@ export default function DonatePage() {
                 <Phone className="h-5 w-5 text-[#20603e]" />
                 <div>
                   <p className="font-medium text-gray-900">Phone</p>
-                  <p className="text-sm text-gray-600">+250 788 123 456</p>
+                  <p className="text-sm text-gray-600">+250 780 325 858</p>
                 </div>
               </div>
             </div>

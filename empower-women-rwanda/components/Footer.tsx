@@ -76,14 +76,17 @@ export default function Footer() {
           <div>
             <h4 className="font-semibold mb-4">Contact</h4>
             <ul className="space-y-2 text-sm text-slate-400">
-              <li>+250 788 123 456</li>
-              <li>info@empowerwomenrwanda.org</li>
+              <li>+250 780 325 858 / 728 446 304</li>
+              <li>empowerwomenrw@gmail.com</li>
               <li>Kigali, Rwanda</li>
             </ul>
           </div>
         </div>
         <div className="border-t border-slate-800 mt-8 pt-8 text-center text-sm text-slate-400">
-          <p>&copy; 2024 Empower Women Rwanda. All rights reserved.</p>
+          <p>
+            &copy; {new Date().getFullYear()} Empower Women Rwanda. All rights
+            reserved.
+          </p>
         </div>
       </div>
     </footer>

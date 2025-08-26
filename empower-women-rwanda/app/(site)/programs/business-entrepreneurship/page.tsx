@@ -93,7 +93,7 @@ export default function BusinessEntrepreneurshipProgramPage() {
                 <div className="bg-blue-50 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
                   <Target className="h-8 w-8 text-blue-600" />
                 </div>
-                <div className="text-3xl font-bold text-gray-900 mb-2">8</div>
+                <div className="text-3xl font-bold text-gray-900 mb-2">6</div>
                 <h3 className="font-semibold text-lg mb-2">Months Training</h3>
                 <p className="text-gray-600">
                   Comprehensive business development program

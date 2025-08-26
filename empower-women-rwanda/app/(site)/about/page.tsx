@@ -49,8 +49,8 @@ export default function AboutPage() {
             <div className="pl-8">
               <h1 className="text-4xl font-bold text-white mb-6">About Us</h1>
               <p className=" text-gray-300 mb-6">
-                Empower Women Rwanda is a non-profit organization founded by
-                Emmanuel Rwagasore that focuses on transforming the lives of
+                Empower Women Rwanda is a non-profit social enterprise founded
+                by Emmanuel Rwagasore that focuses on transforming the lives of
                 Rwandan women by breaking barriers that prevent them from
                 participating fully in the country's economic development.
               </p>
@@ -99,7 +99,7 @@ export default function AboutPage() {
               About Empower Women Rwanda
             </h1>
             <p className=" text-gray-600 mb-6">
-              Empower Women Rwanda is a non-profit organization founded by
+              Empower Women Rwanda is a non-profit social enterprise founded by
               Emmanuel Rwagasore that focuses on transforming the lives of
               Rwandan women by breaking barriers that prevent them from
               participating fully in the country's economic development.
@@ -190,7 +190,7 @@ export default function AboutPage() {
             Our Impact Goal
           </h2>
           <p className="text-lg text-gray-300 max-w-3xl mx-auto mb-8">
-            We aim to reach 1 million women across Rwanda over three years,
+            We aim to reach 1 million women across Rwanda over five years,
             providing them with the tools, skills, and knowledge needed to
             contribute meaningfully to Rwanda's growing economy.
           </p>
@@ -200,7 +200,7 @@ export default function AboutPage() {
               <div className="text-gray-300">Women to Empower</div>
             </div>
             <div className="text-center">
-              <div className="text-3xl font-bold text-[#f7ce04] mb-2">3</div>
+              <div className="text-3xl font-bold text-[#f7ce04] mb-2">5</div>
               <div className="text-gray-300">Years Timeline</div>
             </div>
             <div className="text-center">

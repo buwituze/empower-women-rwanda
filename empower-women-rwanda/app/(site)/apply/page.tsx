@@ -83,8 +83,8 @@ export default function ApplyPage() {
               <li className="flex items-start gap-3">
                 <div className="w-2 h-2 bg-gray-600 rounded-full mt-2 flex-shrink-0"></div>
                 <span className="text-gray-600">
-                  Available for full 8-month program commitment (2 months
-                  theory, 6 months practical)
+                  Available for full 6-month program commitment (2 months
+                  theory, 4 months practical)
                 </span>
               </li>
               <li className="flex items-start gap-3">
@@ -98,7 +98,7 @@ export default function ApplyPage() {
                 <div className="w-2 h-2 bg-gray-600 rounded-full mt-2 flex-shrink-0"></div>
                 <span className="text-gray-600">
                   From underserved communities with limited access to formal
-                  education or resources
+                  income or resources
                 </span>
               </li>
             </ul>
@@ -107,7 +107,7 @@ export default function ApplyPage() {
           {/* Program Benefits */}
           <div>
             <h2 className="text-xl font-semibold text-[#20603e] mb-4">
-              What You'll Receive
+              Our Trains Receive
             </h2>
             <p className="text-gray-600 mb-4">
               Our comprehensive program provides you with everything needed to
@@ -117,7 +117,7 @@ export default function ApplyPage() {
               <li className="flex items-start gap-3">
                 <div className="w-2 h-2 bg-gray-600 rounded-full mt-2 flex-shrink-0"></div>
                 <span className="text-gray-600">
-                  8-month comprehensive training (theory + hands-on practice)
+                  6-month comprehensive training (theory + hands-on practice)
                 </span>
               </li>
               <li className="flex items-start gap-3">
