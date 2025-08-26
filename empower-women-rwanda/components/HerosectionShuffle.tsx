@@ -1,7 +1,5 @@
 "use client";
 
-// one with cool shuffle
-
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { useState, useEffect, useCallback } from "react";
@@ -36,11 +34,11 @@ export default function HeroV2({
         />
       </div>
 
-      <div className="relative container mx-auto px-4 py-16 sm:py-4 lg:py-0 w-full">
+      <div className="relative container mx-auto px-4 py-10 sm:py-4 lg:py-0 w-full">
         <div className="grid items-center gap-10 lg:grid-cols-12">
           {/* LEFT: Content */}
           <div className="lg:col-span-7 text-white">
-            <h1 className="text-4xl font-extrabold tracking-tight sm:text-5xl lg:text-6xl">
+            <h1 className="text-4xl font-extrabold tracking-tight sm:text-5xl lg:text-[50px]">
               {headline}
             </h1>
             <p className="mt-9 max-w-prose text-white/90 md:text-lg">
@@ -64,7 +62,7 @@ export default function HeroV2({
           </div>
 
           {/* RIGHT: Enhanced Photo Stack */}
-          <div className="lg:col-span-5 flex items-end justify-center relative">
+          <div className="lg:col-span-5 -mt-10 flex items-center justify-center relative">
             <PhotoStack
               images={[
                 "/woman in a field.png",
@@ -117,21 +115,20 @@ function PhotoStack({ images }: { images: string[] }) {
     return () => clearInterval(timer);
   }, [nextImage, autoPlay]);
 
-  // Pause auto-play when user interacts
   const handleUserInteraction = () => {
     setAutoPlay(false);
-    setTimeout(() => setAutoPlay(true), 10000); // Resume after 10 seconds
+    setTimeout(() => setAutoPlay(true), 10000);
   };
 
   return (
-    <div className="relative w-80 h-96">
+    <div className="relative w-90 h-100">
       {/* Navigation buttons */}
       <button
         onClick={() => {
           handleUserInteraction();
           prevImage();
         }}
-        className="absolute -left-4 top-1/2 -translate-y-1/2 z-50 bg-white/20 hover:bg-white/30 backdrop-blur-sm rounded-full p-2 transition-all duration-200 hover:scale-110"
+        className="absolute -left-11 top-1/2 -translate-y-1/2 z-50 bg-white/20 hover:bg-white/30 backdrop-blur-sm rounded-full p-2 transition-all duration-200 hover:scale-110"
         disabled={isAnimating}
       >
         <ChevronLeft className="w-5 h-5 text-white" />
@@ -142,7 +139,7 @@ function PhotoStack({ images }: { images: string[] }) {
           handleUserInteraction();
           nextImage();
         }}
-        className="absolute -right-4 top-1/2 -translate-y-1/2 z-50 bg-white/20 hover:bg-white/30 backdrop-blur-sm rounded-full p-2 transition-all duration-200 hover:scale-110"
+        className="absolute -right-11 top-1/2 -translate-y-1/2 z-50 bg-white/20 hover:bg-white/30 backdrop-blur-sm rounded-full p-2 transition-all duration-200 hover:scale-110"
         disabled={isAnimating}
       >
         <ChevronRight className="w-5 h-5 text-white" />
@@ -192,7 +189,7 @@ function PhotoStack({ images }: { images: string[] }) {
                 }}
                 transition={{
                   duration: 0.8,
-                  ease: [0.25, 0.46, 0.45, 0.94], // Custom easing for smooth card movement
+                  ease: [0.25, 0.46, 0.45, 0.94],
                   x: { type: "spring", stiffness: 100, damping: 20 },
                   rotate: { duration: 1 },
                 }}
@@ -207,11 +204,11 @@ function PhotoStack({ images }: { images: string[] }) {
                   }
                 }}
               >
-                <div className="bg-white p-3 shadow-2xl rounded-lg hover:shadow-3xl transition-shadow duration-300 transform">
+                <div className="bg-white p-1 shadow-2xl rounded-lg hover:shadow-3xl transition-shadow duration-300 transform">
                   <img
                     src={src}
                     alt=""
-                    className="w-64 h-80 object-cover rounded-md"
+                    className="w-90 h-100 object-cover rounded-md"
                     draggable={false}
                   />
                 </div>
