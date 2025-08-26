@@ -4,7 +4,7 @@ import type React from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { useState } from "react";
+import { useState, useEffect, useRef } from "react";
 import { Menu, ChevronDown, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
@@ -68,6 +68,7 @@ export default function NavBar() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [desktopDropdownOpen, setDesktopDropdownOpen] = useState(false);
   const [mobileProgramsOpen, setMobileProgramsOpen] = useState(false);
+  const dropdownRef = useRef<HTMLDivElement>(null);
 
   const isActiveLink = (href: string) => {
     if (href === "/") return pathname === "/";
@@ -82,6 +83,34 @@ export default function NavBar() {
   const toggleMobilePrograms = () => {
     setMobileProgramsOpen(!mobileProgramsOpen);
   };
+
+  const toggleDesktopDropdown = () => {
+    setDesktopDropdownOpen(!desktopDropdownOpen);
+  };
+
+  const closeDesktopDropdown = () => {
+    setDesktopDropdownOpen(false);
+  };
+
+  // Handle clicks outside the dropdown to close it
+  useEffect(() => {
+    const handleClickOutside = (event: MouseEvent) => {
+      if (
+        dropdownRef.current &&
+        !dropdownRef.current.contains(event.target as Node)
+      ) {
+        setDesktopDropdownOpen(false);
+      }
+    };
+
+    if (desktopDropdownOpen) {
+      document.addEventListener("mousedown", handleClickOutside);
+    }
+
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
+  }, [desktopDropdownOpen]);
 
   return (
     <>
@@ -112,7 +141,7 @@ export default function NavBar() {
             {navigationConfig.mainNav.map((item) => {
               if (item.dropdown) {
                 return (
-                  <div key={item.href} className="relative">
+                  <div key={item.href} className="relative" ref={dropdownRef}>
                     <button
                       className={cn(
                         "inline-flex items-center gap-1 px-3 py-2 text-sm font-medium transition-all duration-200 hover:text-[#0b97d5] rounded-md hover:bg-gray-50",
@@ -122,11 +151,7 @@ export default function NavBar() {
                         desktopDropdownOpen && "text-[#0b97d5] bg-[#0b97d5]/5"
                       )}
                       aria-label={item.label}
-                      onMouseEnter={() => setDesktopDropdownOpen(true)}
-                      onMouseLeave={() => setDesktopDropdownOpen(false)}
-                      onClick={() =>
-                        setDesktopDropdownOpen(!desktopDropdownOpen)
-                      }
+                      onClick={toggleDesktopDropdown}
                     >
                       {item.label}
                       <ChevronDown
@@ -139,18 +164,14 @@ export default function NavBar() {
 
                     {/* Desktop Dropdown - Positioned absolutely to avoid layout shifts */}
                     {desktopDropdownOpen && (
-                      <div
-                        className="absolute top-full left-0 mt-2 min-w-64 bg-white/95 backdrop-blur-md border shadow-lg rounded-md z-50"
-                        onMouseEnter={() => setDesktopDropdownOpen(true)}
-                        onMouseLeave={() => setDesktopDropdownOpen(false)}
-                      >
+                      <div className="absolute top-full left-0 mt-2 min-w-64 bg-white/95 backdrop-blur-md border shadow-lg rounded-md z-50">
                         <div className="py-2">
                           {item.dropdown.map((subItem) => (
                             <Link
                               key={subItem.href}
                               href={subItem.href}
                               className="block px-4 py-2.5 text-sm text-gray-700 hover:text-[#0b97d5] hover:bg-[#0b97d5]/5 transition-colors duration-200"
-                              onClick={() => setDesktopDropdownOpen(false)}
+                              onClick={closeDesktopDropdown}
                             >
                               {subItem.label}
                             </Link>
@@ -172,6 +193,7 @@ export default function NavBar() {
                       ? "text-[#0b97d5] bg-[#0b97d5]/5"
                       : "text-gray-700"
                   )}
+                  onClick={closeDesktopDropdown} // Close dropdown when clicking other nav items
                 >
                   {item.label}
                 </Link>
@@ -187,6 +209,7 @@ export default function NavBar() {
                 variant={button.variant as "default" | "outline"}
                 size="sm"
                 className={cn("transition-all duration-200", button.className)}
+                onClick={closeDesktopDropdown} // Close dropdown when clicking action buttons
               >
                 <Link href={button.href}>{button.label}</Link>
               </Button>

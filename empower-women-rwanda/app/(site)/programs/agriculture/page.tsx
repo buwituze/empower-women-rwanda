@@ -14,6 +14,11 @@ import {
   MapPin,
 } from "lucide-react";
 
+export const metadata = {
+  title: "Our Programs",
+  description: "Explore our 8 month Agriculture programs.",
+};
+
 export default function AgricultureProgramPage() {
   return (
     <div className="min-h-screen bg-white">

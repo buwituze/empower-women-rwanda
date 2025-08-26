@@ -15,6 +15,11 @@ import {
   Coins,
 } from "lucide-react";
 
+export const metadata = {
+  title: "Our Programs",
+  description: "Explore our 8 month Livestock Farming programs.",
+};
+
 export default function LivestockProgramPage() {
   return (
     <div className="min-h-screen bg-white">

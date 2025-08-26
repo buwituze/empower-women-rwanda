@@ -1,11 +1,10 @@
 import type React from "react";
 import type { Metadata } from "next";
-import "./globals.css"; // Add this import
+import "./globals.css";
 import NavBar from "@/components/NavBar";
 import Footer from "@/components/Footer";
 import { Toaster } from "@/components/toaster";
 
-// Default SEO metadata
 export const metadata: Metadata = {
   metadataBase: new URL("https://example.com"),
   title: {
@@ -60,9 +59,7 @@ export default function SiteLayout({
   return (
     <html lang="en">
       <body className="min-h-dvh antialiased pt-16">
-        <header>
-          <NavBar />
-        </header>
+        <NavBar />
         <main className="flex-1">{children}</main>
         <Footer />
         <Toaster />

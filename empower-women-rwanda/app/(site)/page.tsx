@@ -11,7 +11,7 @@ import { Users, TrendingUp, Target, Lightbulb, Heart } from "lucide-react";
 import Image from "next/image";
 
 export const metadata = {
-  title: "Home",
+  title: "Empower Women Rwanda",
   description:
     "Empowering Rwandan women through education, leadership, and entrepreneurship to lead in technology and business.",
 };

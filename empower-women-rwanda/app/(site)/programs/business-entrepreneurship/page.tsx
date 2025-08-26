@@ -16,6 +16,11 @@ import {
   Handshake,
 } from "lucide-react";
 
+export const metadata = {
+  title: "Our Programs",
+  description: "Explore our 8 month Business & Entrepreneurship programs.",
+};
+
 export default function BusinessEntrepreneurshipProgramPage() {
   return (
     <div className="min-h-screen bg-white">

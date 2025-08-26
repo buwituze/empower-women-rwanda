@@ -1,5 +1,5 @@
 export const metadata = {
-  title: "Programs",
+  title: "Our Programs",
   description:
     "Explore our programs in Agriculture, Farming & Livestock, Business & Entrepreneurship, and Digital Business & E‑commerce.",
 };
