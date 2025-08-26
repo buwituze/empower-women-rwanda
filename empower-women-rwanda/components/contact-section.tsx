@@ -38,7 +38,7 @@ export default function Contact() {
                   </div>
                   <div>
                     <div className="font-semibold text-slate-900">Phone</div>
-                    <div className="text-slate-600">+250 788 123 456</div>
+                    <div className="text-slate-600">+250 780 325 858</div>
                   </div>
                 </div>
                 <div className="flex items-center space-x-4">
@@ -48,7 +48,7 @@ export default function Contact() {
                   <div>
                     <div className="font-semibold text-slate-900">Email</div>
                     <div className="text-slate-600">
-                      info@empowerwomenrwanda.org
+                      empowerwomenrw@gmail.com
                     </div>
                   </div>
                 </div>

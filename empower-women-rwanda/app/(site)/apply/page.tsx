@@ -107,7 +107,7 @@ export default function ApplyPage() {
           {/* Program Benefits */}
           <div>
             <h2 className="text-xl font-semibold text-[#20603e] mb-4">
-              Our Trains Receive
+              Our Trainees Receive
             </h2>
             <p className="text-gray-600 mb-4">
               Our comprehensive program provides you with everything needed to
