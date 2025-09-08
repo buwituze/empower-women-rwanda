@@ -165,7 +165,7 @@ export default function ProgramsPage() {
         <SubSection
           title="What's Included"
           items={[
-            "8-month comprehensive program",
+            "6-month comprehensive program",
             "$70 startup grant",
             "Ongoing mentorship",
             "Business network access",

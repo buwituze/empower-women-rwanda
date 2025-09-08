@@ -49,10 +49,11 @@ export default function AboutPage() {
             <div className="pl-8">
               <h1 className="text-4xl font-bold text-white mb-6">About Us</h1>
               <p className=" text-gray-300 mb-6">
-                Empower Women Rwanda is a non-profit social enterprise founded
-                by Emmanuel Rwagasore that focuses on transforming the lives of
-                Rwandan women by breaking barriers that prevent them from
-                participating fully in the country's economic development.
+                Empower Women Rwanda is dedicated to unlocking the potential of
+                women across Rwanda. We provide the comprehensive training,
+                support, and mentorship they need to turn innovative ideas into
+                thriving businesses, empowering them to become influential
+                leaders and transform their communities.
               </p>
               <div className="mt-6 flex flex-wrap gap-3">
                 <Button

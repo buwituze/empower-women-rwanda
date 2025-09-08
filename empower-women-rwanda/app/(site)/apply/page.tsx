@@ -63,42 +63,50 @@ export default function ApplyPage() {
               Eligibility Requirements
             </h2>
             <p className="text-gray-600 mb-4">
-              To be eligible for our women empowerment program, you must meet
-              the following criteria:
+              To be eligible for our programs, you must meet the following
+              criteria:
             </p>
             <ul className="space-y-3">
               <li className="flex items-start gap-3">
                 <div className="w-2 h-2 bg-gray-600 rounded-full mt-2 flex-shrink-0"></div>
                 <span className="text-gray-600">
-                  Women aged 18–45, resident of Rwanda
+                  You can commit to the full 6-month program, which includes 2
+                  months of theory and 4 months of practical work.
                 </span>
               </li>
               <li className="flex items-start gap-3">
                 <div className="w-2 h-2 bg-gray-600 rounded-full mt-2 flex-shrink-0"></div>
                 <span className="text-gray-600">
-                  Motivated to start or grow a business in agriculture, farming,
-                  or other sectors
+                  You are a woman aged 18–45 and a resident of Rwanda as this is
+                  where we operate currently.
                 </span>
               </li>
               <li className="flex items-start gap-3">
                 <div className="w-2 h-2 bg-gray-600 rounded-full mt-2 flex-shrink-0"></div>
                 <span className="text-gray-600">
-                  Available for full 6-month program commitment (2 months
-                  theory, 4 months practical)
+                  You are motivated to start or grow a business in agriculture,
+                  farming, or other sectors.
                 </span>
               </li>
               <li className="flex items-start gap-3">
                 <div className="w-2 h-2 bg-gray-600 rounded-full mt-2 flex-shrink-0"></div>
                 <span className="text-gray-600">
-                  Willing to mentor and support other women entrepreneurs after
-                  program completion
+                  You come from an underserved community with limited access to
+                  formal income or resources.
                 </span>
               </li>
               <li className="flex items-start gap-3">
                 <div className="w-2 h-2 bg-gray-600 rounded-full mt-2 flex-shrink-0"></div>
                 <span className="text-gray-600">
-                  From underserved communities with limited access to formal
-                  income or resources
+                  You are willing to mentor and support other women
+                  entrepreneurs after completing the program.
+                </span>
+              </li>
+              <li className="flex items-start gap-3">
+                <div className="w-2 h-2 bg-gray-600 rounded-full mt-2 flex-shrink-0"></div>
+                <span className="text-gray-600">
+                  You are committed to transforming your community and showing
+                  the impact of the program on your business or idea.
                 </span>
               </li>
             </ul>

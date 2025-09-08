@@ -80,7 +80,7 @@ export default function GetInvolvedPage() {
             </div>
             <h3 className="text-xl font-semibold text-[#20603e] mb-3">Apply</h3>
             <p className="text-gray-600 mb-4">
-              Join our 8-month program and gain entrepreneurship, business, and
+              Join our 6-month program and gain entrepreneurship, business, and
               digital skills
             </p>
             <Button
@@ -290,42 +290,52 @@ export default function GetInvolvedPage() {
                     Eligibility Requirements
                   </h2>
                   <p className="text-gray-600 mb-4">
-                    To be eligible for our women empowerment program, you must
-                    meet the following criteria:
+                    To be eligible for our programs, you must meet the following
+                    criteria:
                   </p>
                   <ul className="space-y-3">
                     <li className="flex items-start gap-3">
                       <div className="w-2 h-2 bg-gray-600 rounded-full mt-2 flex-shrink-0"></div>
                       <span className="text-gray-600">
-                        Women aged 18–45, resident of Rwanda
+                        You can commit to the full 6-month program, which
+                        includes 2 months of theory and 4 months of practical
+                        work.
                       </span>
                     </li>
                     <li className="flex items-start gap-3">
                       <div className="w-2 h-2 bg-gray-600 rounded-full mt-2 flex-shrink-0"></div>
                       <span className="text-gray-600">
-                        Motivated to start or grow a business in agriculture,
-                        farming, or other sectors
+                        You are a woman aged 18–45 and a resident of Rwanda as
+                        this is where we operate currently.
                       </span>
                     </li>
                     <li className="flex items-start gap-3">
                       <div className="w-2 h-2 bg-gray-600 rounded-full mt-2 flex-shrink-0"></div>
                       <span className="text-gray-600">
-                        Available for full 8-month program commitment (2 months
-                        theory, 6 months practical)
+                        You are motivated to start or grow a business in
+                        agriculture, farming, or other sectors.
                       </span>
                     </li>
                     <li className="flex items-start gap-3">
                       <div className="w-2 h-2 bg-gray-600 rounded-full mt-2 flex-shrink-0"></div>
                       <span className="text-gray-600">
-                        Willing to mentor and support other women entrepreneurs
-                        after program completion
+                        You come from an underserved community with limited
+                        access to formal income or resources.
                       </span>
                     </li>
                     <li className="flex items-start gap-3">
                       <div className="w-2 h-2 bg-gray-600 rounded-full mt-2 flex-shrink-0"></div>
                       <span className="text-gray-600">
-                        From underserved communities with limited access to
-                        formal education or resources
+                        You are willing to mentor and support other women
+                        entrepreneurs after completing the program.
+                      </span>
+                    </li>
+                    <li className="flex items-start gap-3">
+                      <div className="w-2 h-2 bg-gray-600 rounded-full mt-2 flex-shrink-0"></div>
+                      <span className="text-gray-600">
+                        You are committed to transforming your community and
+                        showing the impact of the program on your business or
+                        idea.
                       </span>
                     </li>
                   </ul>
@@ -344,7 +354,7 @@ export default function GetInvolvedPage() {
                     <li className="flex items-start gap-3">
                       <div className="w-2 h-2 bg-gray-600 rounded-full mt-2 flex-shrink-0"></div>
                       <span className="text-gray-600">
-                        8-month comprehensive training (theory + hands-on
+                        6-month comprehensive training (theory + hands-on
                         practice)
                       </span>
                     </li>
@@ -868,7 +878,7 @@ export default function GetInvolvedPage() {
                         Training materials & equipment
                       </p>
                       <p className="text-gray-500 text-sm">
-                        Digital devices and practical tools for the 8-month
+                        Digital devices and practical tools for the 6-month
                         program.
                       </p>
                     </div>
@@ -1001,7 +1011,7 @@ export default function GetInvolvedPage() {
                       <div>
                         <p className="font-medium text-gray-900">Email</p>
                         <p className="text-sm text-gray-600">
-                          info@empowerwomenrwanda.org
+                          empowerwomenrw@gmail.com
                         </p>
                       </div>
                     </div>
@@ -1010,7 +1020,7 @@ export default function GetInvolvedPage() {
                       <div>
                         <p className="font-medium text-gray-900">Phone</p>
                         <p className="text-sm text-gray-600">
-                          +250 788 123 456
+                          +250 780 325 858 / +250 728 446 304
                         </p>
                       </div>
                     </div>
