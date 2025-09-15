@@ -73,7 +73,7 @@ export default function AboutPage() {
             </div>
             <div className="pl-20">
               <Image
-                src="/placeholder-5j713.png"
+                src="/woman in a field.png"
                 width={600}
                 height={400}
                 alt="Community training with Rwandan women"

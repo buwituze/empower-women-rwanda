@@ -26,7 +26,7 @@ export default function GetInvolvedPage() {
   return (
     <div className="min-h-screen bg-white text-slate-900">
       {/* Hero Section - Same design as About page */}
-      <section className="bg-slate-900/90 py-10 mb-16">
+      <section className="bg-slate-900/90 py-16 mb-16">
         <header className="container mx-auto pr-6">
           <div className="grid gap-10 md:grid-cols-2 md:items-center">
             <div className="pl-8">
@@ -55,7 +55,7 @@ export default function GetInvolvedPage() {
                 </Button>
               </div>
             </div>
-            <div className="pl-20">
+            {/* <div className="pl-20">
               <Image
                 src="/placeholder-5j713.png"
                 width={100}
@@ -63,7 +63,7 @@ export default function GetInvolvedPage() {
                 alt="Women empowerment training session"
                 className="w-full rounded-xl border-none object-cover shadow-lg"
               />
-            </div>
+            </div> */}
           </div>
         </header>
       </section>
