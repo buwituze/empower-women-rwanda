@@ -7,7 +7,7 @@ import Contact from "@/components/contact-section";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
-import { Users, TrendingUp, Target, Lightbulb, Heart } from "lucide-react";
+import { Users, TrendingUp } from "lucide-react";
 import Image from "next/image";
 
 export const metadata = {
@@ -72,10 +72,10 @@ export default function HomePage() {
             </div>
             <div className="relative flex items-end justify-end">
               <Image
-                src="/placeholder.svg?height=400&width=500"
+                src="/women-learning-tech-skills.jpeg"
                 alt="Women learning technology skills"
-                width={500}
-                height={400}
+                width={600}
+                height={600}
                 className="rounded-xl shadow-lg"
               />
             </div>
@@ -108,25 +108,25 @@ export default function HomePage() {
               title="Agriculture Empowerment"
               description="Modern, sustainable techniques to increase productivity and access digital markets."
               href="/programs#agriculture"
-              imageQuery="Rwanda%20modern%20farming%20women"
+              imageQuery="/Female farmer.jpg"
             />
             <ProgramCard
               title="Farming & Livestock"
               description="Poultry & small livestock management plus value‑added agri‑business skills."
               href="/programs#livestock"
-              imageQuery="Rwanda%20women%20livestock%20poultry"
+              imageQuery="/livestock farmer.jpg"
             />
             <ProgramCard
               title="Business & Entrepreneurship"
               description="Business fundamentals, finance, marketing, mentorship, and incubation."
               href="/programs#business"
-              imageQuery="Rwanda%20women%20entrepreneurship%20training"
+              imageQuery="/happy women.jpg"
             />
             <ProgramCard
               title="Digital Business & E‑commerce"
               description="E‑commerce, digital marketing, and fintech to master the digital economy."
               href="/programs#digital"
-              imageQuery="Rwanda%20women%20digital%20business"
+              imageQuery="/e-business lady.jpeg"
             />
           </div>
         </div>

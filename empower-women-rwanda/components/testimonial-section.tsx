@@ -8,7 +8,7 @@ const testimonials = [
     role: "Agriculture Program Graduate",
     content:
       "The program transformed my farming practices. I now use modern techniques and have access to digital markets. My income has tripled!",
-    image: "Rwanda%20woman%20farmer%20success",
+    image: "/placeholder.png",
     rating: 5,
   },
   {
@@ -16,7 +16,7 @@ const testimonials = [
     role: "Digital Business Program Graduate",
     content:
       "Learning e-commerce and digital marketing opened new opportunities. I now run a successful online store and help other women start theirs.",
-    image: "Rwanda%20woman%20entrepreneur%20success",
+    image: "/placeholder.png",
     rating: 5,
   },
   {
@@ -24,7 +24,7 @@ const testimonials = [
     role: "Business Program Graduate",
     content:
       "The mentorship and business training gave me confidence to start my own company. Today, I employ 15 women in my community.",
-    image: "Rwanda%20woman%20business%20owner",
+    image: "/placeholder.png",
     rating: 5,
   },
 ];
@@ -83,7 +83,7 @@ function TestimonialCard({
       <CardContent className="p-6">
         <div className="flex items-center gap-4 mb-4">
           <Image
-            src={`/abstract-geometric-shapes.png?height=60&width=60&query=${image}`}
+            src={image}
             alt={name}
             width={60}
             height={60}

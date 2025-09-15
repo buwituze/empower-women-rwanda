@@ -56,9 +56,9 @@ export default function AgricultureProgramPage() {
             </div>
             <div className="pl-20">
               <Image
-                src="/placeholder-5j713.png"
-                width={100}
-                height={60}
+                src="/Female farmer.jpg"
+                width={600}
+                height={400}
                 alt="Women farmers learning modern techniques"
                 className="w-full rounded-xl border-none object-cover shadow-lg"
               />

@@ -74,8 +74,8 @@ export default function AboutPage() {
             <div className="pl-20">
               <Image
                 src="/placeholder-5j713.png"
-                width={100}
-                height={60}
+                width={600}
+                height={400}
                 alt="Community training with Rwandan women"
                 className="w-full rounded-xl border-none object-cover shadow-lg"
               />
@@ -87,7 +87,7 @@ export default function AboutPage() {
         <div className="grid gap-10 md:grid-cols-2 md:items-center">
           <div>
             <Image
-              src="/placeholder-5j713.png"
+              src="/women-empowerment-1.jpg"
               width={640}
               height={440}
               alt="Community training with Rwandan women"

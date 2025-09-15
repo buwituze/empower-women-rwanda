@@ -30,7 +30,7 @@ const faqs = [
   {
     question: "How long is the program?",
     answer:
-      "8 months total - 2 months theory and 6 months practical implementation.",
+      "6 months total - 2 months theory and 4 months practical implementation.",
   },
 ];
 

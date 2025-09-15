@@ -58,9 +58,9 @@ export default function LivestockProgramPage() {
             </div>
             <div className="pl-20">
               <Image
-                src="/placeholder-livestock.png"
-                width={100}
-                height={60}
+                src="/livestock farming.jpg"
+                width={600}
+                height={400}
                 alt="Women in livestock and agri-business"
                 className="w-full rounded-xl border-none object-cover shadow-lg"
               />
