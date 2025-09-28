@@ -12,28 +12,32 @@ type Member = { name: string; role: string; imgQuery: string };
 
 const team: Member[] = [
   {
-    name: "Emmanuel Rwagasore (Emmy)",
+    name: "Emmanuel RWAGASORE",
     role: "Founder & Executive Director",
     imgQuery: "Founder%20portrait",
   },
   {
-    name: "JP",
+    name: "Maurice NTAHOBARI",
     role: "Operations Manager",
     imgQuery: "Operations%20manager%20portrait",
   },
   {
-    name: "Andromaque",
+    name: "Andromaque Leontine HIRWA",
     role: "Finance Director",
     imgQuery: "Finance%20director%20portrait",
   },
   {
-    name: "Chancelline",
+    name: "Chancelline NIYOTUGENDANA",
     role: "Marketing Director",
     imgQuery: "Marketing%20director%20portrait",
   },
-  { name: "Vanson", role: "HR Director", imgQuery: "HR%20director%20portrait" },
   {
-    name: "Benitha",
+    name: "Jean Paul BUKURU",
+    role: "HR Director",
+    imgQuery: "HR%20director%20portrait",
+  },
+  {
+    name: "Benitha UWITUZE",
     role: "Monitoring & Evaluation Director",
     imgQuery: "Monitoring%20and%20evaluation%20portrait",
   },
@@ -168,7 +172,7 @@ export default function AboutPage() {
               Practical Phase
             </h3>
             <p className="text-gray-600">
-              6 months of hands-on implementation with mentorship support
+              4 months of hands-on implementation with mentorship support
             </p>
           </div>
           <div className="text-center p-6">
@@ -191,7 +195,7 @@ export default function AboutPage() {
             Our Impact Goal
           </h2>
           <p className="text-lg text-gray-300 max-w-3xl mx-auto mb-8">
-            We aim to reach 1 million women across Rwanda over five years,
+            We aim to reach over 1 million women across Rwanda over five years,
             providing them with the tools, skills, and knowledge needed to
             contribute meaningfully to Rwanda's growing economy.
           </p>

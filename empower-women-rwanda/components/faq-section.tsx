@@ -10,7 +10,7 @@ const faqs = [
   {
     question: "Who can apply for the programs?",
     answer:
-      "Rwandan women aged 18-45 who are motivated to start or grow a business and can commit to our 8-month program.",
+      "Rwandan women aged 18-45 who are motivated to start or grow a business and can commit to our 6-month program.",
   },
   {
     question: "How much does the program cost?",

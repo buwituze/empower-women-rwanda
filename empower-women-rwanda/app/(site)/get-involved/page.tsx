@@ -34,10 +34,10 @@ export default function GetInvolvedPage() {
                 Get Involved
               </h1>
               <p className="text-gray-300 mb-6">
-                Join our mission to empower 1 million women in Rwanda through
-                education, leadership and entrepreneurship. Together, we can
-                break barriers and create lasting change in communities across
-                Rwanda.
+                Join our mission to empower over 1 million women in Rwanda
+                through education, leadership and entrepreneurship. Together, we
+                can break barriers and create lasting change in communities
+                across Rwanda.
               </p>
               <div className="mt-6 flex flex-wrap gap-3">
                 <Button
@@ -835,7 +835,7 @@ export default function GetInvolvedPage() {
 
                   <div className="bg-gradient-to-br from-slate-600/5 to-[#20603e]/5 rounded-xl p-6 mb-8">
                     <h3 className="text-xl font-semibold text-[#20603e] mb-3">
-                      Together: Empowering 1 Million Women
+                      Together: Empowering over 1 Million Women
                     </h3>
                     <p className="text-gray-600">
                       With collective support from you, we aim to reach 1
@@ -999,10 +999,14 @@ export default function GetInvolvedPage() {
                   <h2 className="text-xl font-semibold text-slate-600 mb-4">
                     Ready to Make an Impact?
                   </h2>
-                  <p className="text-gray-600 mb-6">
+                  <p className="text-gray-600 mb-3">
                     Contact us to discuss your donation and learn more about how
                     your contribution will directly support women entrepreneurs
                     in Rwanda.
+                  </p>
+
+                  <p className="text-gray-900 mb-6">
+                    Empowering one woman equals empowering entire communities.
                   </p>
 
                   <div className="space-y-4 mb-6">
@@ -1025,7 +1029,6 @@ export default function GetInvolvedPage() {
                       </div>
                     </div>
                   </div>
-
                   <div className="space-y-3">
                     <Button
                       asChild
@@ -1041,7 +1044,6 @@ export default function GetInvolvedPage() {
                       <Link href="#contact">Discuss In-Kind Support</Link>
                     </Button>
                   </div>
-
                   <div className="mt-6 pt-6 border-t border-gray-200">
                     <p className="text-xs text-gray-500 text-center">
                       Empower Women Rwanda is committed to transparent use of
