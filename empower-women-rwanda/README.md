@@ -1,36 +1,166 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Empower Women Rwanda 🇷🇼
 
-## Getting Started
+> *"We Do The Right Thing"*
 
-First, run the development server:
+**Transforming the lives of Rwandan women through education, entrepreneurship, and leadership development.**
 
+Empower Women Rwanda is a non-governmental organization focused on breaking barriers that prevent women from participating fully in Rwanda's economic development. We provide comprehensive support through education, leadership training, and entrepreneurship programs across four key sectors.
+
+## 🌟 Our Mission
+
+Creating a Rwanda where women play an equal role in leading economic and social development through education, leadership, and entrepreneurship.
+
+## 🎯 Our Programs
+
+We offer **free 8-month programs** (2 months theory + 6 months practical implementation) across four key sectors:
+
+### 🌱 Agriculture Empowerment
+Modern, sustainable techniques to increase productivity and access digital markets.
+
+### 🐄 Farming & Livestock
+Poultry & small livestock management plus value-added agri-business skills.
+
+### 💼 Business & Entrepreneurship
+Business fundamentals, finance, marketing, mentorship, and incubation support.
+
+### 💻 Digital Business & E-commerce
+E-commerce, digital marketing, and fintech to master the digital economy.
+
+## 🎁 What We Provide
+
+- **Free training programs** - All our programs are completely free
+- **$70 startup grant** - Each participant receives funding to start their business
+- **Mentorship** - Ongoing support and guidance
+- **Community access** - Connect with like-minded women entrepreneurs
+
+## 📍 Who We Serve
+
+- **Target Group**: Rwandan women aged 18-45
+- **Requirements**: Motivated to start or grow a business, able to commit to 8-month program
+- **Coverage**: Operating in Kigali, expanding to all 30 districts of Rwanda with special focus on rural areas
+
+## 🚀 Getting Started (Development)
+
+This website is built with [Next.js](https://nextjs.org) and uses modern web technologies to showcase our programs and enable applications.
+
+### Prerequisites
+
+- Node.js 18+ 
+- npm or yarn
+
+### Installation
+
+1. Clone the repository:
+```bash
+git clone https://github.com/buwituze/empower-women-rwanda.git
+cd empower-women-rwanda
+```
+
+2. Install dependencies:
+```bash
+npm install
+# or
+yarn install
+```
+
+3. Run the development server:
 ```bash
 npm run dev
 # or
 yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+4. Open [http://localhost:3000](http://localhost:3000) to view the website.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+### Build for Production
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```bash
+npm run build
+npm start
+```
 
-## Learn More
+## 🛠️ Tech Stack
 
-To learn more about Next.js, take a look at the following resources:
+- **Framework**: Next.js 15.4.2 with App Router
+- **Language**: TypeScript
+- **Styling**: Tailwind CSS
+- **UI Components**: Radix UI primitives
+- **Icons**: Lucide React & Iconify
+- **Form Handling**: React Hook Form with Zod validation
+- **Deployment**: Vercel (recommended)
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## 📁 Project Structure
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+```
+├── app/                    # Next.js App Router pages
+│   ├── (site)/            # Main site layout group
+│   │   ├── page.tsx       # Home page
+│   │   ├── about/         # About page
+│   │   ├── programs/      # Program pages
+│   │   ├── apply/         # Application page
+│   │   └── ...
+├── components/            # Reusable React components
+│   ├── ui/               # Base UI components
+│   ├── NavBar.tsx        # Navigation component
+│   ├── Footer.tsx        # Footer component
+│   └── ...
+├── hooks/                # Custom React hooks
+├── lib/                  # Utility functions
+├── public/               # Static assets
+└── ...
+```
 
-## Deploy on Vercel
+## 🤝 Contributing
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+We welcome contributions to improve our website and reach more women across Rwanda!
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+### Ways to Contribute
+
+1. **Code Contributions**
+   - Bug fixes
+   - Feature enhancements
+   - UI/UX improvements
+   - Performance optimizations
+
+2. **Content Contributions**
+   - Program descriptions
+   - Success stories
+   - Translations (Kinyarwanda, French)
+
+3. **Design Contributions**
+   - Visual improvements
+   - Accessibility enhancements
+   - Mobile responsiveness
+
+### Development Guidelines
+
+1. Fork the repository
+2. Create a feature branch: `git checkout -b feature/your-feature-name`
+3. Make your changes
+4. Test thoroughly: `npm run build` and `npm run lint`
+5. Commit with clear messages
+6. Push to your fork and submit a pull request
+
+## 📧 Contact & Support
+
+- **Email**: empowerwomenrw@gmail.com
+- **Phone**: +250780325858
+- **Location**: Kigali, Rwanda
+- **Website**: [Visit our website](https://empowerwomenrwanda.org)
+
+## 📄 License
+
+This project is open source and available under the [MIT License](LICENSE).
+
+## 🙏 Acknowledgments
+
+- All the amazing women who participate in our programs
+- Our volunteers and mentors
+- The communities we serve across Rwanda
+- Technology partners who support our digital initiatives
+
+---
+
+**Ready to get involved?** Visit our [Get Involved page](/get-involved) or [Apply to our programs](/apply) today!
+
+*Building a stronger Rwanda, one empowered woman at a time.* 💪
